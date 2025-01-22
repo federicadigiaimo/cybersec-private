@@ -26,8 +26,10 @@ echo "Starting tshark..."
 tshark $TSHARK_ARGS &
 TSHARK_PID=$!
 
+# Log conferma
 echo "Starting tshark with args: $TSHARK_ARGS"
 
+# Verifica
 if ! tshark $TSHARK_ARGS &; then
     echo "Failed to start tshark"
     exit 1
