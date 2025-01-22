@@ -1,5 +1,3 @@
 # repo privata di CyberSec
 
-tutto pulito
-
-non del tutto!
+test sulla traduzione da JSON a UDM
