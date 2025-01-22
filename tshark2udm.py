@@ -1,4 +1,6 @@
 import json
+import sys
+import os
 
 def wireshark_to_udm(input_json):
     """
@@ -52,14 +54,41 @@ def wireshark_to_udm(input_json):
 
     return udm_events
 
-# Example usage
+# Main entry point
 if __name__ == "__main__":
-    with open("capture1.json", "r") as f:
-        wireshark_json = f.read()
+    # Check for the correct number of arguments
+    if len(sys.argv) != 2:
+        print("Usage: python3 wireshark_to_udm_parser.py <input_json_file>")
+        sys.exit(1)
 
-    udm_events = wireshark_to_udm(wireshark_json)
+    input_file = sys.argv[1]
 
-    with open("udm_output.json", "w") as f:
-        json.dump(udm_events, f, indent=4)
+    # Validate that the input file exists
+    if not os.path.isfile(input_file):
+        print(f"Error: File '{input_file}' not found.")
+        sys.exit(1)
 
-    print("Conversion completed. Output saved to udm_output.json.")
+    # Read the input file
+    try:
+        with open(input_file, "r") as f:
+            wireshark_json = f.read()
+    except Exception as e:
+        print(f"Error reading file '{input_file}': {e}")
+        sys.exit(1)
+
+    # Convert the JSON data
+    try:
+        udm_events = wireshark_to_udm(wireshark_json)
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON from file '{input_file}': {e}")
+        sys.exit(1)
+
+    # Save the output to a file
+    output_file = "udm_output.json"
+    try:
+        with open(output_file, "w") as f:
+            json.dump(udm_events, f, indent=4)
+        print(f"Conversion completed. Output saved to {output_file}.")
+    except Exception as e:
+        print(f"Error writing to file '{output_file}': {e}")
+        sys.exit(1)
