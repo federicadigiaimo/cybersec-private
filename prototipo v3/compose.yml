@@ -1,19 +1,19 @@
 version: '3.7'
 services:
-  wireshark:
-    build: .
-    volumes:
-      - ./input:/input
-      - ./output:/output
-    cap_add:
-      - NET_ADMIN  # Permessi per eseguire tshark
-      - NET_RAW
-    network_mode: "host"
-    depends_on:
-      - wait-for-input
+  wireshark:
+    build: .
+    volumes:
+      - ./input:/input
+      - ./output:/output
+    cap_add:
+      - NET_ADMIN  # Permessi per eseguire tshark
+      - NET_RAW
+    network_mode: "host"
+    depends_on:
+      - wait-for-input
 
-  wait-for-input:
-    image: busybox:latest
-    volumes:
-      - ./input:/input
-    command: ["sh", "-c", "while [ ! -d /input ]; do sleep 1; done; echo 'Input directory ready'"]
+  wait-for-input:
+    image: busybox:latest
+    volumes:
+      - ./input:/input
+    command: ["sh", "-c", "while [ ! -d /input ]; do sleep 1; done; echo 'Input directory ready'"]
