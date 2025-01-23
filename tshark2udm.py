@@ -2,7 +2,7 @@ import json
 import sys
 import os
 
-def wireshark_to_udm(input_json):
+def json_to_udm(input_json):
     """
     Convert Tshark JSON export to Google Chronicle JSON-UDM format.
 
@@ -24,6 +24,7 @@ def wireshark_to_udm(input_json):
             eth = layers.get("eth", {})
             ip = layers.get("ip", {})
             tcp = layers.get("tcp", {})
+            udp = layers.get("udp", {})  # Supporto UDP
 
             event = {
                 "event": {
@@ -32,11 +33,11 @@ def wireshark_to_udm(input_json):
                 },
                 "network": {
                     "protocol": frame.get("frame.protocols"),
-                    "transport": "TCP" if tcp else None,
+                     "transport": "TCP" if tcp else ("UDP" if udp else None),  # Gestione UDP
                     "src_ip": ip.get("ip.src"),
                     "dst_ip": ip.get("ip.dst"),
-                    "src_port": tcp.get("tcp.srcport"),
-                    "dst_port": tcp.get("tcp.dstport"),
+                    "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
+                    "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else None),
                 },
                 "source": {
                     "ip": ip.get("ip.src"),
@@ -78,17 +79,20 @@ if __name__ == "__main__":
 
     # Convert the JSON data
     try:
-        udm_events = wireshark_to_udm(wireshark_json)
+        udm_events = json_to_udm(wireshark_json)
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON from file '{input_file}': {e}")
         sys.exit(1)
 
     # Save the output to a file
-    output_file = "udm_output.json"
-    try:
-        with open(output_file, "w") as f:
-            json.dump(udm_events, f, indent=4)
-        print(f"Conversion completed. Output saved to {output_file}.")
-    except Exception as e:
-        print(f"Error writing to file '{output_file}': {e}")
-        sys.exit(1)
+    if udm_events:
+        output_file = os.path.splitext(input_file)[0] + ".udm.json"
+        try:
+            with open(output_file, "w") as f:
+                json.dump(udm_events, f, indent=4)
+            print(f"Conversion completed. Output saved to {output_file}.")
+        except Exception as e:
+            print(f"Error writing to file '{output_file}': {e}")
+            sys.exit(1)
+    else:
+        print(f"No events to write for {input_file}")
