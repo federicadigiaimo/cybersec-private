@@ -58,8 +58,8 @@ def json_to_udm(input_json):
 # Main entry point
 if __name__ == "__main__":
     # Check for the correct number of arguments
-    if len(sys.argv) != 2:
-        print("Usage: python3 wireshark_to_udm_parser.py <input_json_file>")
+    if len(sys.argv) != 3:
+        print("Usage: python3 json_to_udm_parser.py <input_json_file> <output_udm_file")
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     # Save the output to a file
     if udm_events:
-        output_file = os.path.splitext(input_file)[0] + ".udm.json"
+        output_file = sys.argv[2]
         try:
             with open(output_file, "w") as f:
                 json.dump(udm_events, f, indent=4)
