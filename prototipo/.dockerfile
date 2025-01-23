@@ -6,7 +6,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY wireshark_to_udm_parser.py /app/wireshark_to_udm_parser.py
+COPY json2udm_parser.py /app/json2udm_parser.py
 COPY monitor_files.sh /app/monitor_files.sh
 
 RUN chmod +x /app/monitor_files.sh

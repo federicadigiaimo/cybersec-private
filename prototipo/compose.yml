@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  wireshark:
+  wireshark-parser:
     build: .
     volumes:
       - ./input:/input
@@ -12,7 +12,7 @@ services:
     depends_on:
       - wait-for-input
 
-  wait-for-input:
+  wait-for-input: # fa aspettare l'altro che "input" esista
     image: busybox:latest
     volumes:
       - ./input:/input
