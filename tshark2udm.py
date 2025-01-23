@@ -25,7 +25,7 @@ def json_to_udm(input_json):
             eth = layers.get("eth", {})
             ip = layers.get("ip", {})
             tcp = layers.get("tcp", {})
-            udp = layers.get("udp", {})  # Supporto UDP
+            udp = layers.get("udp", {})  # UDP support
 
             event = {
                 "event": {
@@ -34,7 +34,7 @@ def json_to_udm(input_json):
                 },
                 "network": {
                     "protocol": frame.get("frame.protocols"),
-                     "transport": "TCP" if tcp else ("UDP" if udp else None),  # Gestione UDP
+                     "transport": "TCP" if tcp else ("UDP" if udp else None),  # UDP support
                     "src_ip": ip.get("ip.src"),
                     "dst_ip": ip.get("ip.dst"),
                     "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
@@ -58,6 +58,7 @@ def json_to_udm(input_json):
 
 # Main entry point
 if __name__ == "__main__":
+
     # Check for the correct number of arguments
     if len(sys.argv) != 3:
         print("Usage: python3 json_to_udm_parser.py <input_json_file> <output_udm_file")
