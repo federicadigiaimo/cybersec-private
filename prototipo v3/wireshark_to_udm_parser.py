@@ -2,7 +2,7 @@ import json
 import sys
 import os
 
-def wireshark_to_udm(input_file):
+def json_to_udm(input_file):
     try:
         with open(input_file, 'r') as f:
             packets = json.load(f)
@@ -10,8 +10,10 @@ def wireshark_to_udm(input_file):
         print(f"Error reading or decoding JSON from {input_file}: {e}")
         return []  # Restituisci una lista vuota in caso di errore
 
+    # Lista eventi per Chronicle
     udm_events = []
 
+    # Parsing in evento del pacchetto
     for packet in packets:
         try:
             layers = packet["_source"]["layers"]
@@ -49,13 +51,14 @@ def wireshark_to_udm(input_file):
 
     return udm_events
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python3 wireshark_to_udm_parser.py <input_json_file>")
+        print("Usage: python3 json_to_udm_parser.py <input_json_file>")
         sys.exit(1)
 
     input_file = sys.argv[1]
-    udm_events = wireshark_to_udm(input_file)
+    udm_events = json_to_udm(input_file)
     if udm_events:
         output_file = os.path.splitext(input_file)[0] + ".udm.json"
         try:
