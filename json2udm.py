@@ -3,6 +3,9 @@ import sys
 import os
 import logging
 
+# Configura il logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
 #funzione
 def json_to_udm(input_json):
     """
@@ -35,6 +38,12 @@ def json_to_udm(input_json):
             elif "http" in layers:
                 event_type = "HTTP_REQUEST"
 
+            # Campi opzionali con valori predefiniti
+            src_ip = ip.get("ip.src") or ip.get("ipv6.src", "unknown")
+            dst_ip = ip.get("ip.dst") or ip.get("ipv6.dst", "unknown")
+            src_port = tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else "unknown")
+            dst_port = tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else "unknown")
+
             event = {
                 "event": {
                     "type": event_type,
@@ -43,17 +52,17 @@ def json_to_udm(input_json):
                 "network": {
                     "protocol": frame.get("frame.protocols"),
                      "transport": "TCP" if tcp else ("UDP" if udp else "unknown"),  # UDP support
-                    "src_ip": ip.get("ip.src") or ip.get("ipv6.src", "unknown"),
-                    "dst_ip": ip.get("ip.dst") or ip.get("ipv6.dst", "unknown"),
-                    "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else "unknown"),
-                    "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else "unknown"),
+                    "src_ip": src_ip,
+                    "dst_ip":dst_ip,
+                    "src_port": src_port,
+                    "dst_port": dst_port,
                 },
                 "source": {
-                    "ip": ip.get("ip.src") or ip.get("ipv6.src", "unknown"),
+                    "ip": src_ip,
                     "mac": eth.get("eth.src","unknown"),
                 },
                 "destination": {
-                    "ip": ip.get("ip.dst") or ip.get("ipv6.dst", "unknown"),
+                    "ip": dst_ip,
                     "mac": eth.get("eth.dst","unknown"),
                 },
             }
