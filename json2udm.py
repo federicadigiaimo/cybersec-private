@@ -31,7 +31,7 @@ def json_to_udm(input_json):
 
             # Ottiene i layer
             frame = layers.get("frame", {})
-            eth = layers.get("eth", {})
+            #eth = layers.get("eth", {})
             ip = layers.get("ip", {}) or layers.get("ipv6")
             arp = layers.get("arp")
             tcp = layers.get("tcp", {})
