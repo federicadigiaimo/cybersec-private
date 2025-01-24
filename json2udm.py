@@ -60,7 +60,6 @@ def json_to_udm(input_json):
                     },
                 }
                 udm_events.append(event)
-                continue
             
             if eth:
                 event = {
@@ -130,7 +129,9 @@ def json_to_udm(input_json):
                     },
                 }
                 udm_events.append(event)
-                
+                 logging.info(f"Event added: {event}")
+                continue  # Continua alla prossima iterazione
+            
             # Gestione pacchetti TCP e UDP
             if tcp or udp:
                 event = {
@@ -155,7 +156,8 @@ def json_to_udm(input_json):
                     },
                 }
                 udm_events.append(event)
-            
+                logging.info(f"Event added: {event}")
+                continue  # Continua alla prossima iterazione
             # Aggiungi un evento generico per i pacchetti sconosciuti
             event = {
                 "event": {
