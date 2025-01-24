@@ -1,6 +1,7 @@
 import json
 import sys
 import os
+import logging
 
 #funzione
 def json_to_udm(input_json):
@@ -23,7 +24,7 @@ def json_to_udm(input_json):
             # Extract relevant fields
             frame = layers.get("frame", {})
             eth = layers.get("eth", {})
-            ip = layers.get("ip", {})
+            ip = layers.get("ip", {}) or layers.get("ipv6")
             tcp = layers.get("tcp", {})
             udp = layers.get("udp", {})
             
@@ -37,7 +38,7 @@ def json_to_udm(input_json):
             event = {
                 "event": {
                     "type": event_type,
-                    "start_time": frame.get("frame.time_utc"),
+                    "start_time": frame.get("frame.time_utc","unknown"),
                 },
                 "network": {
                     "protocol": frame.get("frame.protocols"),
@@ -48,11 +49,11 @@ def json_to_udm(input_json):
                     "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else "unknown"),
                 },
                 "source": {
-                    "ip": ip.get("ip.src"),
+                    "ip": ip.get("ip.src") or ip.get("ipv6.src", "unknown"),
                     "mac": eth.get("eth.src","unknown"),
                 },
                 "destination": {
-                    "ip": ip.get("ip.dst"),
+                    "ip": ip.get("ip.dst") or ip.get("ipv6.dst", "unknown"),
                     "mac": eth.get("eth.dst","unknown"),
                 },
             }
