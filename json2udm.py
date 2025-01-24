@@ -33,54 +33,140 @@ def json_to_udm(input_json):
             frame = layers.get("frame", {})
             eth = layers.get("eth", {})
             ip = layers.get("ip", {}) or layers.get("ipv6")
+            arp = layers.get("arp")
             tcp = layers.get("tcp", {})
             udp = layers.get("udp", {})
+            icmp = layers.get("icmp")  # Supporto ICMP
+            http = layers.get("http")  # Supporto HTTP
             
-            # Controlla che i campi necessari esistano
-            if not ip:
-                logging.warning("Skipping packet: no IP or IPv6 layer found")
+
+            # Determinazione tipo di evento
+            if arp:
+                event = {
+                    "event": {
+                        "type": "ARP_REQUEST",
+                        "start_time": frame.get("frame.time_utc", "unknown"),
+                    },
+                    "network": {
+                        "protocol": "ARP",
+                        "src_ip": arp.get("arp.src.proto_ipv4", "unknown"),
+                        "dst_ip": arp.get("arp.dst.proto_ipv4", "unknown"),
+                    },
+                    "source": {
+                        "mac": arp.get("arp.src.hw_mac", "unknown"),
+                    },
+                    "destination": {
+                        "mac": arp.get("arp.dst.hw_mac", "unknown"),
+                    },
+                }
+                udm_events.append(event)
                 continue
             
-            # Determina il tipo di evento
-            event_type = "NETWORK_CONNECTION"
-            if "dns" in layers:
-                event_type = "DNS_REQUEST"
-            elif "http" in layers:
-                event_type = "HTTP_REQUEST"
-
-            # Campi opzionali con valori predefiniti
-            src_ip = ip.get("ip.src") or ip.get("ipv6.src", "unknown")
-            dst_ip = ip.get("ip.dst") or ip.get("ipv6.dst", "unknown")
-            src_port = tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else "unknown")
-            dst_port = tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else "unknown")
-
-            #Creazione evento UDM
+            if eth:
+                event = {
+                    "event": {
+                        "type": "ETHERNET_FRAME",
+                        "start_time": frame.get("frame.time_utc", "unknown"),
+                    },
+                    "source": {
+                        "mac": eth.get("eth.src", "unknown"),
+                    },
+                    "destination": {
+                        "mac": eth.get("eth.dst", "unknown"),
+                    },
+                }
+                udm_events.append(event)
+                
+            # Gestione pacchetti ICMP
+            if icmp:
+                event = {
+                    "event": {
+                        "type": "ICMP_REQUEST",
+                        "start_time": frame.get("frame.time_utc", "unknown"),
+                    },
+                    "network": {
+                        "protocol": "ICMP",
+                        "src_ip": ip.get("ip.src", "unknown"),
+                        "dst_ip": ip.get("ip.dst", "unknown"),
+                    },
+                    "source": {
+                        "ip": ip.get("ip.src", "unknown"),
+                        "mac": eth.get("eth.src", "unknown"),
+                    },
+                    "destination": {
+                        "ip": ip.get("ip.dst", "unknown"),
+                        "mac": eth.get("eth.dst", "unknown"),
+                    },
+                }
+                udm_events.append(event)
+                
+            # Gestisci pacchetti IP
+            if ip:
+                event_type = "NETWORK_CONNECTION"
+                if http:
+                    event_type = "HTTP_REQUEST"
+                elif icmp:
+                    event_type = "ICMP_REQUEST"
+            
+                event = {
+                    "event": {
+                        "type": event_type,
+                        "start_time": frame.get("frame.time_utc", "unknown"),
+                    },
+                    "network": {
+                        "protocol": frame.get("frame.protocols", "unknown"),
+                        "src_ip": ip.get("ip.src", "unknown"),
+                        "dst_ip": ip.get("ip.dst", "unknown"),
+                        "src_port": tcp.get("tcp.srcport", "unknown") if tcp else (udp.get("udp.srcport", "unknown") if udp else "unknown"),
+                        "dst_port": tcp.get("tcp.dstport", "unknown") if tcp else (udp.get("udp.dstport", "unknown") if udp else "unknown"),
+                    },
+                    "source": {
+                        "ip": ip.get("ip.src", "unknown"),
+                        "mac": eth.get("eth.src", "unknown"),
+                    },
+                    "destination": {
+                        "ip": ip.get("ip.dst", "unknown"),
+                        "mac": eth.get("eth.dst", "unknown"),
+                    },
+                }
+                udm_events.append(event)
+                
+            # Gestione pacchetti TCP e UDP
+            if tcp or udp:
+                event = {
+                    "event": {
+                        "type": "TRANSPORT_CONNECTION",
+                        "start_time": frame.get("frame.time_utc", "unknown"),
+                    },
+                    "network": {
+                        "protocol": frame.get("frame.protocols", "unknown"),
+                        "src_ip": ip.get("ip.src", "unknown"),
+                        "dst_ip": ip.get("ip.dst", "unknown"),
+                        "src_port": tcp.get("tcp.srcport", "unknown") if tcp else (udp.get("udp.srcport", "unknown") if udp else "unknown"),
+                        "dst_port": tcp.get("tcp.dstport", "unknown") if tcp else (udp.get("udp.dstport", "unknown") if udp else "unknown"),
+                    },
+                    "source": {
+                        "ip": ip.get("ip.src", "unknown"),
+                        "mac": eth.get("eth.src", "unknown"),
+                    },
+                    "destination": {
+                        "ip": ip.get("ip.dst", "unknown"),
+                        "mac": eth.get("eth.dst", "unknown"),
+                    },
+                }
+                udm_events.append(event)
+            
+            # Aggiungi un evento generico per i pacchetti sconosciuti
             event = {
                 "event": {
-                    "type": event_type,
-                    "start_time": frame.get("frame.time_utc","unknown"),
+                    "type": "UNKNOWN_PACKET",
+                    "start_time": frame.get("frame.time_utc", "unknown"),
                 },
-                "network": {
-                    "protocol": frame.get("frame.protocols","unknown"),
-                     "transport": "TCP" if tcp else ("UDP" if udp else None),  # UDP support
-                    "src_ip": src_ip,
-                    "dst_ip":dst_ip,
-                    "src_port": src_port,
-                    "dst_port": dst_port,
-                },
-                "source": {
-                    "ip": src_ip,
-                    "mac": eth.get("eth.src","unknown"),
-                },
-                "destination": {
-                    "ip": dst_ip,
-                    "mac": eth.get("eth.dst","unknown"),
-                },
+                "raw_data": json.dumps(packet),  # Aggiungi dati grezzi per ulteriori analisi
             }
-
-            #Aggiungi evento alla lista
             udm_events.append(event)
-            
+            logging.info(f"Unknown event added: {event}")
+        
         except KeyError as e:
             logging.warning(f"Skipping packet due to missing key: {e}")
         except Exception as e:
