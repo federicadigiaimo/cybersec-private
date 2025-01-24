@@ -27,7 +27,7 @@ def json_to_udm(input_json):
             tcp = layers.get("tcp", {})
             udp = layers.get("udp", {})
             
-             # Determine event type
+            # Determine event type
             event_type = "NETWORK_CONNECTION"
             if "dns" in layers:
                 event_type = "DNS_REQUEST"
@@ -41,25 +41,28 @@ def json_to_udm(input_json):
                 },
                 "network": {
                     "protocol": frame.get("frame.protocols"),
-                     "transport": "TCP" if tcp else ("UDP" if udp else None),  # UDP support
-                    "src_ip": ip.get("ip.src"),
-                    "dst_ip": ip.get("ip.dst"),
-                    "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
-                    "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else None),
+                     "transport": "TCP" if tcp else ("UDP" if udp else "unknown"),  # UDP support
+                    "src_ip": ip.get("ip.src") or ip.get("ipv6.src", "unknown"),
+                    "dst_ip": ip.get("ip.dst") or ip.get("ipv6.dst", "unknown"),
+                    "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else "unknown"),
+                    "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else "unknown"),
                 },
                 "source": {
                     "ip": ip.get("ip.src"),
-                    "mac": eth.get("eth.src"),
+                    "mac": eth.get("eth.src","unknown"),
                 },
                 "destination": {
                     "ip": ip.get("ip.dst"),
-                    "mac": eth.get("eth.dst"),
+                    "mac": eth.get("eth.dst","unknown"),
                 },
             }
 
             udm_events.append(event)
+            
         except KeyError as e:
-            print(f"Skipping packet due to missing key: {e}")
+            logging.warning(f"Skipping packet due to missing key: {e}")
+        except Exception as e:
+            logging.error(f"Unexpected error processing packet: {e}")
 
     return udm_events
 
