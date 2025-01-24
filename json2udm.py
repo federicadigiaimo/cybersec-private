@@ -25,11 +25,18 @@ def json_to_udm(input_json):
             eth = layers.get("eth", {})
             ip = layers.get("ip", {})
             tcp = layers.get("tcp", {})
-            udp = layers.get("udp", {})  # UDP support
+            udp = layers.get("udp", {})
+            
+             # Determine event type
+            event_type = "NETWORK_CONNECTION"
+            if "dns" in layers:
+                event_type = "DNS_REQUEST"
+            elif "http" in layers:
+                event_type = "HTTP_REQUEST"
 
             event = {
                 "event": {
-                    "type": "NETWORK_CONNECTION",
+                    "type": event_type,
                     "start_time": frame.get("frame.time_utc"),
                 },
                 "network": {
