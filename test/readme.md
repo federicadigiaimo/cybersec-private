@@ -14,3 +14,5 @@ lo scipt            è la prima versione che cerca i file nella cartella in cui 
 ## secondo test
 
 _reale+output       è stato usato lo script nella root, subito dopo la prima introduzione dell'output
+
+## provetta
