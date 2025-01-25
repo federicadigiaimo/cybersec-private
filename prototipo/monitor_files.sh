@@ -1,15 +1,20 @@
 #!/bin/bash
 
+# Script eseguito all'avvio del container, gestisce sia lo sniffing che il suo post-processing
+
+# Parametri dello sniffing con wireshark
+TSHARK_ARGS="-i eth0 -T json -b filesize:1024 -w $TSHARK_OUTPUT"
+
+# Dichiarazione variabili
 INPUT_DIR="/input"
 OUTPUT_DIR="/output"
-TSHARK_OUTPUT="$INPUT_DIR/sniffed_data"
-TSHARK_ARGS="-i eth0 -T json -b filesize:1024 -w $TSHARK_OUTPUT"
+TSHARK_OUTPUT="$INPUT_DIR/raw_$(date +%Y%m%d_%H%M%S)"
 
 # Funzione per processare un file
 process_file() {
     local file="$1"
     echo "Processing file: $file"
-    python3 /app/json2udm.py "$file"
+    python3 /app/json2udm.py "$file" $OUTPUT_DIR/"$file"
     if [[ $? -eq 0 ]]; then
         echo "Processing successful, removing file: $file"
         rm "$file" # Rimuovi il file solo se l'elaborazione è andata a buon fine
@@ -36,7 +41,7 @@ if ! tshark $TSHARK_ARGS &; then
 fi
 
 # Gestione dei file già presenti nella directory
-find "$INPUT_DIR" -name "sniffed_data*" -print0 | while IFS= read -r -d $'\0' file; do
+find "$INPUT_DIR" -name "raw*" -print0 | while IFS= read -r -d $'\0' file; do
     process_file "$file"
 done
 
