@@ -28,7 +28,7 @@ url = 'https://europe-west12-malachiteingestion-pa.googleapis.com/v2/udmevents:b
 # request body
 body = {
     "customerId": CUSTOMER_ID,
-    "events": json.loads(json_events),
+#    "events": json.loads(json_events),
 }
 response = http_session.request("POST", 
                                 url, 
