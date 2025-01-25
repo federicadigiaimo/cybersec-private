@@ -7,9 +7,13 @@ from google.oauth2 import service_account
 # Accesso API ingestion Chronicle
 SCOPES = ['https://www.googleapis.com/auth/malachite-ingestion']
 
+# Specifica l'URL dell'endpoint dell'API di ingestione per la creazione di eventi UDM (Unified Data Model)
+# regional endpoint for your API call
+INGESTION_API_BASE_URL = "https://europe-west12-malachiteingestion-pa.googleapis.com"  # Turin
+
 # The apikeys-demo.json file contains the customer's OAuth 2 credentials.
 # Credenziali
-ING_SERVICE_ACCOUNT_FILE = '/customer-keys/apikeys.json'
+ING_SERVICE_ACCOUNT_FILE = '/customer-keys/apikeys.json' # fittizio
 CUSTOMER_ID="01234567-89ab-cdef-0123-456789abcdef" #fittizio
 
 # Create a credential using an Ingestion Service Account Credential and Google Security Operations API
@@ -17,13 +21,12 @@ CUSTOMER_ID="01234567-89ab-cdef-0123-456789abcdef" #fittizio
 credentials = service_account.Credentials.from_service_account_file(ING_SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # Build a requests Session Object to make authorized OAuth requests.
+# La sessione gestisce automaticamente l'inclusione dell'header Authorization
 http_session = requests.AuthorizedSession(credentials)
 
-# UDM Event example (for US region)
+# UDM Event example
 # url = 'https://malachiteingestion-pa.googleapis.com/v2/udmevents:batchCreate'
-# Specifica l'URL dell'endpoint dell'API di ingestione per la creazione di eventi UDM (Unified Data Model)
-# regional endpoint for your API call
-url = 'https://europe-west12-malachiteingestion-pa.googleapis.com/v2/udmevents:batchCreate' # Turin
+url = f"{INGESTION_API_BASE_URL}/v2/udmevents:batchCreate"
 
 # request body
 body = {
