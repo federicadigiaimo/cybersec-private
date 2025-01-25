@@ -8,7 +8,7 @@ _reale              è il risultato dell'esecuzione
 
 _simulato           è il risultato atteso
 
-lo scipt            è la prima versione che cerca i file nella cartella in cui si trova
+lo script            è la prima versione che cerca i file nella cartella in cui si trova
 
 
 ## secondo test
