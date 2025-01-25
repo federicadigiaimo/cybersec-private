@@ -3,10 +3,10 @@ import sys
 import os
 import logging
 
-# Configura il logging
+# Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-#funzione
+# Function
 def json_to_udm(input_json):
     """
     Convert Tshark JSON export to Google Chronicle JSON-UDM format.
@@ -34,7 +34,7 @@ def json_to_udm(input_json):
             eth = layers.get("eth", {})
             ip = layers.get("ip", {})
             tcp = layers.get("tcp", {})
-            udp = layers.get("udp", {})  # UDP support
+            udp = layers.get("udp", {})
 
             event = {
                 "event": {
@@ -43,7 +43,7 @@ def json_to_udm(input_json):
                 },
                 "network": {
                     "protocol": frame.get("frame.protocols"),
-                    "transport": "TCP" if tcp else ("UDP" if udp else None),  # UDP support
+                    "transport": "TCP" if tcp else ("UDP" if udp else None),
                     "src_ip": ip.get("ip.src"),
                     "dst_ip": ip.get("ip.dst"),
                     "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
