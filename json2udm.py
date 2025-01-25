@@ -1,8 +1,12 @@
 import json
 import sys
 import os
+import logging
 
-#funzione
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+# Function
 def json_to_udm(input_json):
     """
     Convert Tshark JSON export to Google Chronicle JSON-UDM format.
@@ -13,7 +17,12 @@ def json_to_udm(input_json):
     Returns:
         list: List of dictionaries in JSON-UDM format.
     """
-    packets = json.loads(input_json)
+    try:
+        packets = json.loads(input_json)
+    except json.JSONDecodeError as e:
+        logging.error(f"Error decoding JSON: {e}")
+        return []
+    
     udm_events = []
 
     for packet in packets:
@@ -51,6 +60,7 @@ def json_to_udm(input_json):
             }
 
             udm_events.append(event)
+        
         except KeyError as e:
             print(f"Skipping packet due to missing key: {e}")
 
@@ -61,10 +71,11 @@ if __name__ == "__main__":
 
     # Check for the correct number of arguments
     if len(sys.argv) != 3:
-        print("Usage: python3 json_to_udm_parser.py <input_json_file> <output_udm_file")
+        print("Usage: python3 json_to_udm_parser.py <input_json_file> <name_output_udm_file")
         sys.exit(1)
 
     input_file = sys.argv[1]
+    output_file = sys.argv[2]
 
     # Validate that the input file exists
     if not os.path.isfile(input_file):
@@ -88,7 +99,6 @@ if __name__ == "__main__":
 
     # Save the output to a file
     if udm_events:
-        output_file = sys.argv[2]
         try:
             with open(output_file, "w") as f:
                 json.dump(udm_events, f, indent=4)
