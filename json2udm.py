@@ -34,7 +34,7 @@ def json_to_udm(input_json):
                 },
                 "network": {
                     "protocol": frame.get("frame.protocols"),
-                     "transport": "TCP" if tcp else ("UDP" if udp else None),  # UDP support
+                    "transport": "TCP" if tcp else ("UDP" if udp else None),  # UDP support
                     "src_ip": ip.get("ip.src"),
                     "dst_ip": ip.get("ip.dst"),
                     "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
