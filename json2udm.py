@@ -3,6 +3,7 @@ import sys
 import os
 import logging
 
+MAX_FILE_SIZE_MB = 1
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -66,6 +67,45 @@ def json_to_udm(input_json):
 
     return udm_events
 
+
+# Function to write events to multiple files if size exceeds 1 MB
+def write_to_multiple_files(events, base_output_file):
+    
+    max_size_bytes = MAX_FILE_SIZE_MB * 1024 * 1024  # Convert MB to bytes
+    current_file_index = 1
+    current_events = []
+    current_size = 0
+
+    for event in events:
+        # Serialize the event and calculate its size
+        event_json = json.dumps(event, indent=4)
+        event_size = len(event_json.encode("utf-8"))  # Size in bytes
+
+        # Check if adding this event exceeds the size limit
+        if current_size + event_size > max_size_bytes:
+            # Write the current file
+            output_file = f"{base_output_file}_{current_file_index}.json"
+            with open(output_file, "w") as f:
+                json.dump(current_events, f, indent=4)
+            print(f"Saved {len(current_events)} events to {output_file}.")
+            # Start a new file
+            current_file_index += 1
+            current_events = []
+            current_size = 0
+
+        # Add the event to the current file's list
+        current_events.append(event)
+        current_size += event_size
+
+    # Write the last file if there are remaining events
+    if current_events:
+        output_file = f"{base_output_file}_{current_file_index}.json"
+        with open(output_file, "w") as f:
+            json.dump(current_events, f, indent=4)
+        print(f"Saved {len(current_events)} events to {output_file}.")
+
+
+
 # Main entry point
 if __name__ == "__main__":
 
@@ -99,12 +139,6 @@ if __name__ == "__main__":
 
     # Save the output to a file
     if udm_events:
-        try:
-            with open(output_file, "w") as f:
-                json.dump(udm_events, f, indent=4)
-            print(f"Conversion completed. Output saved to {output_file}.")
-        except Exception as e:
-            print(f"Error writing to file '{output_file}': {e}")
-            sys.exit(1)
+        write_to_multiple_files(udm_events, output_file)
     else:
         print(f"No events to write for {input_file}")
