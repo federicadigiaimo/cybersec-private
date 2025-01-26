@@ -15,4 +15,12 @@ lo scipt            è la prima versione che cerca i file nella cartella in cui 
 
 _reale+output       è stato usato lo script nella root, subito dopo la prima introduzione dell'output
 
-## provetta
+## terzo test
+
+capture3.json       tshark -c 20 -e frame.time -e frame.number -e frame.protocols -e eth.src -e eth.dst -e ip.src -e ip.dst -e tcp.srcport -e tcp.dstport -e udp.srcport -e udp.dstport -T json
+
+capture4.json       tshark -i wlo1 -c 100 -T json
+
+capture5.json       tshark -i wlo1 -c 25 -e frame.time_epoch -e frame.len -T json 
+
+capture6.json       tshark -i wlo1 -c 25 -e ip.src -e ip.dst -e tcp.srcport -e tcp.dstport -T json
