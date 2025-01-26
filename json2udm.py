@@ -13,21 +13,19 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Convert timestamp to ISO 8601
 def convert_timestamp(timestamp_str):
     try:
-        timestamp_str = timestamp_str[:-9] + timestamp_str[-3:]  # Mantieni solo i primi 6 caratteri dei microsecondi
+        timestamp_str = timestamp_str[:-9] + timestamp_str[-3:]
         
-        # Assicurarsi che ci sia uno spazio prima di 'UTC'
         if "UTC" in timestamp_str:
-            timestamp_str = timestamp_str.replace("UTC", " UTC")  # Aggiungi spazio prima di 'UTC' se non c'è
+            timestamp_str = timestamp_str.replace("UTC", " UTC")
 
-        # Converti il timestamp in oggetto datetime
         dt = datetime.strptime(timestamp_str, "%b %d, %Y %H:%M:%S.%f %Z")
-        dt = dt.replace(tzinfo=timezone.utc)  # Imposta il fuso orario come UTC
-        iso_timestamp = dt.isoformat()  # Converte in formato ISO 8601
+        dt = dt.replace(tzinfo=timezone.utc)
+        iso_timestamp = dt.isoformat()
         iso_timestamp = iso_timestamp.replace("+00:00","Z")
         return iso_timestamp
     except Exception as e:
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
-        return None  # Restituisce None in caso di errore
+        return None
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
