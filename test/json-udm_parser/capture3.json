@@ -1,0 +1,542 @@
+[
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:30.370932599 CET"
+        ],
+        "frame.number": [
+          "1"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:arp"
+        ],
+        "eth.src": [
+          "20:28:bc:16:7b:44"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:30.985406311 CET"
+        ],
+        "frame.number": [
+          "2"
+        ],
+        "frame.protocols": [
+          "eth:llc:stp"
+        ],
+        "eth.src": [
+          "38:a6:ce:51:d0:98"
+        ],
+        "eth.dst": [
+          "01:80:c2:00:00:00"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:31.082181988 CET"
+        ],
+        "frame.number": [
+          "3"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:ip:tcp"
+        ],
+        "eth.src": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "eth.dst": [
+          "80:91:33:31:60:93"
+        ],
+        "ip.src": [
+          "13.107.246.60"
+        ],
+        "ip.dst": [
+          "192.168.178.30"
+        ],
+        "tcp.srcport": [
+          "443"
+        ],
+        "tcp.dstport": [
+          "35772"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:31.082245847 CET"
+        ],
+        "frame.number": [
+          "4"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:ip:tcp"
+        ],
+        "eth.src": [
+          "80:91:33:31:60:93"
+        ],
+        "eth.dst": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "ip.src": [
+          "192.168.178.30"
+        ],
+        "ip.dst": [
+          "13.107.246.60"
+        ],
+        "tcp.srcport": [
+          "35772"
+        ],
+        "tcp.dstport": [
+          "443"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:31.082264739 CET"
+        ],
+        "frame.number": [
+          "5"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:ip:tcp"
+        ],
+        "eth.src": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "eth.dst": [
+          "80:91:33:31:60:93"
+        ],
+        "ip.src": [
+          "13.107.246.60"
+        ],
+        "ip.dst": [
+          "192.168.178.30"
+        ],
+        "tcp.srcport": [
+          "443"
+        ],
+        "tcp.dstport": [
+          "35772"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:31.082689352 CET"
+        ],
+        "frame.number": [
+          "6"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:ip:tcp"
+        ],
+        "eth.src": [
+          "80:91:33:31:60:93"
+        ],
+        "eth.dst": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "ip.src": [
+          "192.168.178.30"
+        ],
+        "ip.dst": [
+          "13.107.246.60"
+        ],
+        "tcp.srcport": [
+          "35772"
+        ],
+        "tcp.dstport": [
+          "443"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:31.095415905 CET"
+        ],
+        "frame.number": [
+          "7"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:ip:tcp"
+        ],
+        "eth.src": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "eth.dst": [
+          "80:91:33:31:60:93"
+        ],
+        "ip.src": [
+          "13.107.246.60"
+        ],
+        "ip.dst": [
+          "192.168.178.30"
+        ],
+        "tcp.srcport": [
+          "443"
+        ],
+        "tcp.dstport": [
+          "35772"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:31.292494031 CET"
+        ],
+        "frame.number": [
+          "8"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:arp"
+        ],
+        "eth.src": [
+          "20:28:bc:16:7b:44"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:32.009232120 CET"
+        ],
+        "frame.number": [
+          "9"
+        ],
+        "frame.protocols": [
+          "eth:llc:stp"
+        ],
+        "eth.src": [
+          "38:a6:ce:51:d0:98"
+        ],
+        "eth.dst": [
+          "01:80:c2:00:00:00"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:32.009614489 CET"
+        ],
+        "frame.number": [
+          "10"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:arp"
+        ],
+        "eth.src": [
+          "70:ee:50:0f:d0:42"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:32.316740473 CET"
+        ],
+        "frame.number": [
+          "11"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:arp"
+        ],
+        "eth.src": [
+          "20:28:bc:16:7b:44"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:32.419152206 CET"
+        ],
+        "frame.number": [
+          "12"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:data"
+        ],
+        "eth.src": [
+          "38:a6:ce:51:d0:98"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:32.623928062 CET"
+        ],
+        "frame.number": [
+          "13"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:homeplug-av"
+        ],
+        "eth.src": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:32.623928998 CET"
+        ],
+        "frame.number": [
+          "14"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:data"
+        ],
+        "eth.src": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:33.033567191 CET"
+        ],
+        "frame.number": [
+          "15"
+        ],
+        "frame.protocols": [
+          "eth:llc:stp"
+        ],
+        "eth.src": [
+          "38:a6:ce:51:d0:98"
+        ],
+        "eth.dst": [
+          "01:80:c2:00:00:00"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:33.135937609 CET"
+        ],
+        "frame.number": [
+          "16"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:data"
+        ],
+        "eth.src": [
+          "38:a6:ce:51:d0:9a"
+        ],
+        "eth.dst": [
+          "01:00:c1:ab:00:1c"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:33.340686497 CET"
+        ],
+        "frame.number": [
+          "17"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:arp"
+        ],
+        "eth.src": [
+          "20:28:bc:16:7b:44"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:33.955125681 CET"
+        ],
+        "frame.number": [
+          "18"
+        ],
+        "frame.protocols": [
+          "eth:llc:stp"
+        ],
+        "eth.src": [
+          "38:a6:ce:51:d0:98"
+        ],
+        "eth.dst": [
+          "01:80:c2:00:00:00"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:34.364450080 CET"
+        ],
+        "frame.number": [
+          "19"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:arp"
+        ],
+        "eth.src": [
+          "20:28:bc:16:7b:44"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-26",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame.time": [
+          "Jan 26, 2025 10:26:34.569491425 CET"
+        ],
+        "frame.number": [
+          "20"
+        ],
+        "frame.protocols": [
+          "eth:ethertype:homeplug-av"
+        ],
+        "eth.src": [
+          "3c:37:12:40:fc:a2"
+        ],
+        "eth.dst": [
+          "ff:ff:ff:ff:ff:ff"
+        ]
+      }
+    }
+  }
+]
