@@ -1,40 +1,44 @@
 import json
-
-# Gestione autenticazione e richieste HTTP
+import google.auth
 from google.auth.transport import requests
 from google.oauth2 import service_account
 
-# Accesso API ingestion Chronicle
+# Load configuration file
+def load_config(filename):
+    config = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line and '=' in line:
+                key, value = line.split('=', 1)
+                config[key.strip()] = value.strip()
+    return config
+config = load_config('config.conf')
+
+# Load costumer id and credentials
+customer_id = config['CUSTOMER_ID']
+ing_service_account_file = config['ING_SERVICE_ACCOUNT_FILE']
+
+# Regional endpoint for API call - Turin
+INGESTION_API = "https://europe-west12-malachiteingestion-pa.googleapis.com"
+
+# Permissions API ingestion Chronicle
 SCOPES = ['https://www.googleapis.com/auth/malachite-ingestion']
 
-# The apikeys-demo.json file contains the customer's OAuth 2 credentials.
-# Credenziali
-ING_SERVICE_ACCOUNT_FILE = '/customer-keys/apikeys.json'
-CUSTOMER_ID="01234567-89ab-cdef-0123-456789abcdef" #fittizio
-
 # Create a credential using an Ingestion Service Account Credential and Google Security Operations API
-# Scope.
-credentials = service_account.Credentials.from_service_account_file(ING_SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+credentials = service_account.Credentials.from_service_account_file(ing_service_account_file, scopes=SCOPES)
 
-# Build a requests Session Object to make authorized OAuth requests.
+# Build an authorized HTTP session
 http_session = requests.AuthorizedSession(credentials)
 
-# UDM Event example (for US region)
-# url = 'https://malachiteingestion-pa.googleapis.com/v2/udmevents:batchCreate'
-# Specifica l'URL dell'endpoint dell'API di ingestione per la creazione di eventi UDM (Unified Data Model)
-# regional endpoint for your API call
-url = 'https://europe-west12-malachiteingestion-pa.googleapis.com/v2/udmevents:batchCreate' # Turin
+# Complete endpoint
+url = f"{INGESTION_API}/v2/udmevents:batchCreate"
 
 # request body
 body = {
-    "customerId": CUSTOMER_ID,
-#    "events": json.loads(json_events),
+    "customerId": customer_id,
+    "events": json.loads(json_events),
 }
 response = http_session.request("POST", 
                                 url, 
                                 json=body)
-
-# For more complete examples, see:
-# https://github.com/chronicle/api-samples-python/blob/master/ingestion/create_entities.py
-# https://github.com/chronicle/api-samples-python/blob/master/ingestion/create_udm_events.py
-# https://github.com/chronicle/api-samples-python/blob/master/ingestion/create_unstructured_log_entries.py
