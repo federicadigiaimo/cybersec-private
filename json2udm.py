@@ -25,6 +25,15 @@ def json_to_udm(input_json):
     
     udm_events = []
 
+    # Protocol mapping to abstract application-level protocols
+    protocol_map = {
+        "http": "HTTP",
+        "icmp": "ICMP",
+        "dns": "DNS",
+        "ssl": "TLS/SSL",
+        "tls": "TLS/SSL",
+    }
+
     for packet in packets:
         try:
             layers = packet["_source"]["layers"]
@@ -36,13 +45,16 @@ def json_to_udm(input_json):
             tcp = layers.get("tcp", {})
             udp = layers.get("udp", {})
 
+            # Detect application-level protocol using the protocol_map
+            protocol = next((value for key, value in protocol_map.items() if key in layers), None)
+
             event = {
                 "event": {
                     "type": "NETWORK_CONNECTION",
                     "start_time": frame.get("frame.time_utc"),
                 },
                 "network": {
-                    "protocol": frame.get("frame.protocols"),
+                    "protocol": protocol or frame.get("frame.protocols"),
                     "transport": "TCP" if tcp else ("UDP" if udp else None),
                     "src_ip": ip.get("ip.src"),
                     "dst_ip": ip.get("ip.dst"),
@@ -62,7 +74,7 @@ def json_to_udm(input_json):
             udm_events.append(event)
         
         except KeyError as e:
-            print(f"Skipping packet due to missing key: {e}")
+            logging.warning(f"Skipping packet due to missing key: {e}")
 
     return udm_events
 
@@ -71,7 +83,7 @@ if __name__ == "__main__":
 
     # Check for the correct number of arguments
     if len(sys.argv) != 3:
-        print("Usage: python3 json_to_udm_parser.py <input_json_file> <name_output_udm_file")
+        print("Usage: python3 json_to_udm_parser.py <input_json_file> <name_output_udm_file>")
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -108,3 +120,4 @@ if __name__ == "__main__":
             sys.exit(1)
     else:
         print(f"No events to write for {input_file}")
+        
