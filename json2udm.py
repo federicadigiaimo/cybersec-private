@@ -4,10 +4,11 @@ import os
 import logging
 
 MAX_FILE_SIZE_MB = 1
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Function
+# Function to convert JSON to UDM format
 def json_to_udm(input_json):
     """
     Convert Tshark JSON export to Google Chronicle JSON-UDM format.
@@ -23,10 +24,8 @@ def json_to_udm(input_json):
     except json.JSONDecodeError as e:
         logging.error(f"Error decoding JSON: {e}")
         return []
-    
-    udm_events = []
 
-    # Protocol mapping to abstract application-level protocols
+    udm_events = []
     protocol_map = {
         "http": "HTTP",
         "icmp": "ICMP",
@@ -76,54 +75,62 @@ def json_to_udm(input_json):
         
         except KeyError as e:
             logging.warning(f"Skipping packet due to missing key: {e}")
+        except Exception as e:
+            logging.error(f"Unexpected error processing packet: {e}")
 
     return udm_events
 
-
 # Function to write events to multiple files if size exceeds 1 MB
 def write_to_multiple_files(events, base_output_file):
-    
     max_size_bytes = MAX_FILE_SIZE_MB * 1024 * 1024  # Convert MB to bytes
     current_file_index = 1
     current_events = []
     current_size = 0
 
     for event in events:
-        # Serialize the event and calculate its size
-        event_json = json.dumps(event, indent=4)
-        event_size = len(event_json.encode("utf-8"))  # Size in bytes
+        try:
+            # Serialize the event and calculate its size
+            event_json = json.dumps(event, indent=4)
+            event_size = len(event_json.encode("utf-8"))  # Size in bytes
 
-        # Check if adding this event exceeds the size limit
-        if current_size + event_size > max_size_bytes:
-            # Write the current file
-            output_file = f"{base_output_file}_{current_file_index}.json"
-            with open(output_file, "w") as f:
-                json.dump(current_events, f, indent=4)
-            print(f"Saved {len(current_events)} events to {output_file}.")
-            # Start a new file
-            current_file_index += 1
-            current_events = []
-            current_size = 0
+            # Check if adding this event exceeds the size limit
+            if current_size + event_size > max_size_bytes:
+                # Write the current file
+                output_file = f"{base_output_file}_{current_file_index}.json"
+                with open(output_file, "w") as f:
+                    json.dump(current_events, f, indent=4)
+                logging.info(f"Saved {len(current_events)} events to {output_file}.")
+                # Start a new file
+                current_file_index += 1
+                current_events = []
+                current_size = 0
 
-        # Add the event to the current file's list
-        current_events.append(event)
-        current_size += event_size
+            # Add the event to the current file's list
+            current_events.append(event)
+            current_size += event_size
+
+        except IOError as e:
+            logging.error(f"Error writing to file: {e}")
+            continue
+        except Exception as e:
+            logging.error(f"Unexpected error while processing event: {e}")
+            continue
 
     # Write the last file if there are remaining events
     if current_events:
-        output_file = f"{base_output_file}_{current_file_index}.json"
-        with open(output_file, "w") as f:
-            json.dump(current_events, f, indent=4)
-        print(f"Saved {len(current_events)} events to {output_file}.")
-
-
+        try:
+            output_file = f"{base_output_file}_{current_file_index}.json"
+            with open(output_file, "w") as f:
+                json.dump(current_events, f, indent=4)
+            logging.info(f"Saved {len(current_events)} events to {output_file}.")
+        except IOError as e:
+            logging.error(f"Error writing the final file: {e}")
 
 # Main entry point
 if __name__ == "__main__":
-
     # Check for the correct number of arguments
     if len(sys.argv) != 3:
-        print("Usage: python3 json_to_udm_parser.py <input_json_file> <name_output_udm_file>")
+        logging.error("Usage: python3 json_to_udm_parser.py <input_json_file> <name_output_udm_file>")
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -131,7 +138,7 @@ if __name__ == "__main__":
 
     # Validate that the input file exists
     if not os.path.isfile(input_file):
-        print(f"Error: File '{input_file}' not found.")
+        logging.error(f"Error: File '{input_file}' not found.")
         sys.exit(1)
 
     # Read the input file
@@ -139,19 +146,21 @@ if __name__ == "__main__":
         with open(input_file, "r") as f:
             wireshark_json = f.read()
     except Exception as e:
-        print(f"Error reading file '{input_file}': {e}")
+        logging.error(f"Error reading file '{input_file}': {e}")
         sys.exit(1)
 
     # Convert the JSON data
     try:
         udm_events = json_to_udm(wireshark_json)
     except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from file '{input_file}': {e}")
+        logging.error(f"Error decoding JSON from file '{input_file}': {e}")
+        sys.exit(1)
+    except Exception as e:
+        logging.error(f"Unexpected error during conversion: {e}")
         sys.exit(1)
 
     # Save the output to a file
     if udm_events:
         write_to_multiple_files(udm_events, output_file)
     else:
-        print(f"No events to write for {input_file}")
-        
+        logging.warning(f"No events to write for {input_file}")
