@@ -10,7 +10,7 @@ MAX_FILE_SIZE_MB = 1
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Convert timestamp to ISO 8601
+# Convert timestamp to RFC 3339
 def convert_timestamp(timestamp_str):
     try:
         timestamp_str = timestamp_str[:-9] + timestamp_str[-3:]
@@ -21,7 +21,6 @@ def convert_timestamp(timestamp_str):
         dt = datetime.strptime(timestamp_str, "%b %d, %Y %H:%M:%S.%f %Z")
         dt = dt.replace(tzinfo=timezone.utc)
         iso_timestamp = dt.isoformat()
-        iso_timestamp = iso_timestamp.replace("+00:00","Z")
         return iso_timestamp
     except Exception as e:
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
