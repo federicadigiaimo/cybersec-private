@@ -2,11 +2,24 @@ import json
 import sys
 import os
 import logging
+from datetime import datetime, timezone
+
 
 MAX_FILE_SIZE_MB = 1
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+# Convert timestamp to ISO 8601
+def convert_timestamp(timestamp_str):
+    try:
+        dt = datetime.strptime(timestamp_str[:-4], "%b %d, %Y %H:%M:%S.%f")
+        dt = dt.replace(tzinfo=timezone.utc)
+        iso_timestamp = dt.isoformat() 
+        return iso_timestamp
+    except Exception as e:
+        logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
+        return None
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
@@ -51,7 +64,7 @@ def json_to_udm(input_json):
             event = {
                 "event": {
                     "type": "NETWORK_CONNECTION",
-                    "start_time": frame.get("frame.time_utc"),
+                    "start_time": convert_timestamp(frame.get("frame.time_utc")),
                 },
                 "network": {
                     "protocol": protocol or frame.get("frame.protocols"),
