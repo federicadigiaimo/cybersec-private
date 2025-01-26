@@ -43,8 +43,6 @@ response = http_session.request("POST",
                                 url, 
                                 json=body)
 
-
-
 # For more complete examples, see:
 # https://github.com/chronicle/api-samples-python/blob/master/ingestion/create_entities.py
 # https://github.com/chronicle/api-samples-python/blob/master/ingestion/create_udm_events.py
