@@ -21,6 +21,7 @@ def convert_timestamp(timestamp_str):
         dt = datetime.strptime(timestamp_str, "%b %d, %Y %H:%M:%S.%f %Z")
         dt = dt.replace(tzinfo=timezone.utc)
         iso_timestamp = dt.isoformat()
+        iso_timestamp = iso_timestamp.split('.')[0] + "+00:00"
         return iso_timestamp
     except Exception as e:
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
