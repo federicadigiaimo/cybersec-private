@@ -1,0 +1,2202 @@
+[
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:40+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:homeplug-av",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "ff:ff:ff:ff:ff:ff"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:llc:stp",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "38:a6:ce:51:d0:98"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "01:80:c2:00:00:00"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "34.120.52.64",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "42714"
+        },
+        "source": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "34.120.52.64",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "42714"
+        },
+        "source": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "34.120.52.64",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "42714"
+        },
+        "source": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "34.120.52.64",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "42714"
+        },
+        "source": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "34.120.52.64",
+            "src_port": "42714",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "34.120.52.64",
+            "src_port": "42714",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "34.120.52.64",
+            "src_port": "42714",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "34.120.52.64",
+            "src_port": "42714",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "142.251.209.42",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "34216"
+        },
+        "source": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45014"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58772"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45016"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.42",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "34216"
+        },
+        "source": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45014"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58772"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58782"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.42",
+            "src_port": "34216",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45014",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58772",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58782",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45016"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.42",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "34216"
+        },
+        "source": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58772"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45014"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58782"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45016",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.42",
+            "src_port": "34216",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58772",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45014",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58782",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.42",
+            "src_port": "34216",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45014",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58772",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45016",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58782",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "34.120.52.64",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "42714"
+        },
+        "source": {
+            "ip": "34.120.52.64",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.42",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "34216"
+        },
+        "source": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58782"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.251.209.35",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "58772"
+        },
+        "source": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.42",
+            "src_port": "34216",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.42",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58782",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.251.209.35",
+            "src_port": "58772",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.251.209.35",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45016"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45014"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "45016"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45016",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45014",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "45016",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.48",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.48",
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "142.250.180.161",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "60184"
+        },
+        "source": {
+            "ip": "142.250.180.161",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "TLS/SSL",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "52224"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.250.180.161",
+            "src_port": "60184",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.250.180.161",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "52224",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "142.250.180.161",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "60184"
+        },
+        "source": {
+            "ip": "142.250.180.161",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "142.250.180.161",
+            "src_port": "60184",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "142.250.180.161",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.48",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.48",
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "173.194.79.84",
+            "dst_ip": "192.168.178.30",
+            "src_port": "443",
+            "dst_port": "52224"
+        },
+        "source": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:tcp",
+            "transport": "TCP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "173.194.79.84",
+            "src_port": "52224",
+            "dst_port": "443"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "173.194.79.84",
+            "mac": "3c:37:12:40:fc:a2"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:data",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "38:a6:ce:75:5d:bd"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "01:00:c1:ab:00:1c"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:41+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:data",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "38:a6:ce:51:d0:98"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "ff:ff:ff:ff:ff:ff"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:llc:stp",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "38:a6:ce:51:d0:98"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "01:80:c2:00:00:00"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.48",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.48",
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:arp",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "70:ee:50:0f:d0:42"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "ff:ff:ff:ff:ff:ff"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:homeplug-av",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "ff:ff:ff:ff:ff:ff"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:data",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "ff:ff:ff:ff:ff:ff"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.48",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.48",
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:42+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "84:ab:1a:71:02:2a"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:llc:stp",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "38:a6:ce:51:d0:98"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "01:80:c2:00:00:00"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.72",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.72",
+            "mac": "38:a6:ce:75:5d:bd"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.30",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.30",
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "80:91:33:31:60:93"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.1",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.1",
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "3c:37:12:40:fc:a2"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.79",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.79",
+            "mac": "38:b8:eb:ca:f7:27"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:43+00:00"
+        },
+        "network": {
+            "protocol": "eth:llc:stp",
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": "38:a6:ce:51:d0:98"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "01:80:c2:00:00:00"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:44+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.42",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.42",
+            "mac": "38:a6:ce:51:d0:9a"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:44+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.39",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.39",
+            "mac": "20:28:bc:16:7b:44"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:44+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.24",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.24",
+            "mac": "ec:b5:fa:83:29:d8"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:44+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ipv6:udp:mdns",
+            "transport": "UDP",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": null,
+            "mac": "ec:b5:fa:83:29:d8"
+        },
+        "destination": {
+            "ip": null,
+            "mac": "33:33:00:00:00:fb"
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": "2025-01-26T09:22:44+00:00"
+        },
+        "network": {
+            "protocol": "eth:ethertype:ip:udp:mdns",
+            "transport": "UDP",
+            "src_ip": "192.168.178.39",
+            "dst_ip": "224.0.0.251",
+            "src_port": "5353",
+            "dst_port": "5353"
+        },
+        "source": {
+            "ip": "192.168.178.39",
+            "mac": "20:28:bc:16:7b:44"
+        },
+        "destination": {
+            "ip": "224.0.0.251",
+            "mac": "01:00:5e:00:00:fb"
+        }
+    }
+]

@@ -27,6 +27,19 @@ def convert_timestamp(timestamp_str):
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
         return None
 
+def print_dns(items,type):
+    for query_value in items:
+        mdns_output_name = query_value.get(type)
+    return mdns_output_name
+
+def print_record_version(items):
+        return items.get("tls.record.version")
+
+def print_handshake_version(items):
+    if "tls.handshake" in items:
+        return items["tls.handshake"].get("tls.handshake.version")
+    else : return "None"
+
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
     """
@@ -45,14 +58,14 @@ def json_to_udm(input_json):
         return []
 
     udm_events = []
-    protocol_map = {
+    """     protocol_map = {
         "http": "HTTP",
         "icmp": "ICMP",
         "dns": "DNS",
         "ssl": "TLS/SSL",
         "tls": "TLS/SSL",
     }
-
+ """
     for packet in packets:
         try:
             layers = packet["_source"]["layers"]
@@ -61,38 +74,82 @@ def json_to_udm(input_json):
             frame = layers.get("frame", {})
             eth = layers.get("eth", {})
             ip = layers.get("ip", {})
+            ipv6 = layers.get("ipv6", {})
             tcp = layers.get("tcp", {})
             udp = layers.get("udp", {})
+            icmp = layers.get("icmp", {})
+            dns = layers.get("dns", {})
+            mdns = layers.get("mdns", {})
+            http = layers.get("http", {})
+            tls = layers.get("tls", {})
 
             # Detect application-level protocol using the protocol_map
-            protocol = next((value for key, value in protocol_map.items() if key in layers), None)
+            # protocol = next((value for key, value in protocol_map.items() if key in layers), None)
 
             event = {
                 "event": {
                     "type": "NETWORK_CONNECTION",
-                    "start_time": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
-                    "frame_len": frame.get("frame.len") if frame.get("frame.len") else None,
+                    "vendor_name": "Wireshark",
+                    "product_name": "Wireshark PacketCapture",
+                    "event_timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
                 },
                 "network": {
-                    "protocol": protocol or frame.get("frame.protocols"),
-                    "transport": "TCP" if tcp else ("UDP" if udp else None),
-                    "src_ip": ip.get("ip.src"),
-                    "dst_ip": ip.get("ip.dst"),
-                    "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
-                    "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else None),
-                    "ip_ttl": ip.get("ip.ttl") if ip.get("ip.ttl") else None,
-                    "tcp_flags": tcp.get("tcp.flags") if tcp.get("tcp.flags") else None,
+                    #"application_protocol" ?
+                    "transport_protocol": "TCP" if tcp else ("UDP" if udp else None),
+                    "ip": {
+                        "source": ip.get("ip.src") ,
+                        "destination": ip.get("ip.dst"),
+                        "ttl": ip.get("ip.ttl") if ip.get("ip.ttl") else None,
+                    },
+                    "ipv6": {
+                        "source": ipv6.get("ipv6.src") ,
+                        "destination": ipv6.get("ipv6.dst"),
+                    },
+                    "eth": {
+                        "source_mac": eth.get("eth.src"),
+                        "destination_mac": eth.get("eth.dst"),
+                    },
+                    "udp": {
+                        "source_port": udp.get("udp.srcport") if udp else None,
+                        "destination_port": udp.get("udp.dstport") if udp else None,
+                    },
+                    "tcp": {
+                        "source_port": tcp.get("tcp.srcport") if tcp else None,
+                        "destination_port": tcp.get("tcp.dstport") if tcp else None,
+                        "flags": tcp.get("tcp.flags") if tcp.get("tcp.flags") else None,
+                    },
+                    "icmp": {
+                        "type": icmp.get("icmp.type") if icmp else None,
+                        "code": icmp.get("icmp.code") if icmp else None,
+                    },
+                    "dns": {
+                        "query": {
+                            "name": print_dns(dns["Queries"].items(), "dns.qry.name") if "Queries" in dns else None,
+                            "type": print_dns(dns["Queries"].items(), "dns.qry.type") if "Queries" in dns else None,
+                        },
+                    },
+                    "mdns": {
+                        "query": {
+                            "name": print_dns(mdns["Queries"].items(), "dns.qry.name") if "Queries" in mdns else None,
+                            "type": print_dns(mdns["Queries"].items(), "dns.qry.type") if "Queries" in mdns else None,
+                        },
+                    },
+                    "http": {
+                        "host": http.get("http.host") if http else None,
+                    },
+                    "tls": {
+                        "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
+                        "handshake": {
+                            "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
+                        }
+                    }
                 },
-                "source": {
-                    "ip": ip.get("ip.src"),
-                    "mac": eth.get("eth.src"),
-                },
-                "destination": {
-                    "ip": ip.get("ip.dst"),
-                    "mac": eth.get("eth.dst"),
-                },
+                "frame": {
+                    "timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
+                    "length": frame.get("frame.len") if frame.get("frame.len") else None,
+                    "protocols": frame.get("frame.protocols"),
+                }
             }
-
             udm_events.append(event)
         
         except KeyError as e:

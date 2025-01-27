@@ -1,0 +1,552 @@
+[
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "start_time": null
+        },
+        "network": {
+            "protocol": null,
+            "transport": null,
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null
+        },
+        "source": {
+            "ip": null,
+            "mac": null
+        },
+        "destination": {
+            "ip": null,
+            "mac": null
+        }
+    }
+]
