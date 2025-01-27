@@ -70,7 +70,7 @@ def json_to_udm(input_json):
             event = {
                 "event": {
                     "type": "NETWORK_CONNECTION",
-                    "start_time": convert_timestamp(frame.get("frame.time_utc")),
+                    "start_time": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
                 },
                 "network": {
                     "protocol": protocol or frame.get("frame.protocols"),
