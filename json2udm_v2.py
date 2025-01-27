@@ -27,15 +27,10 @@ def convert_timestamp(timestamp_str):
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
         return None
 
-def print_dns_name(items):
+def print_dns(items,type):
     for query_key, query_value in items:
-        mdns_output_name = query_value.get("dns.qry.name")
+        mdns_output_name = query_value.get(type)
     return mdns_output_name
-
-def print_dns_type(items):
-    for query_key, query_value in items:
-        mdns_output_type = query_value.get("dns.qry.type")
-    return mdns_output_type
 
 def print_record_version(items):
         return items.get("tls.record.version")
@@ -44,11 +39,6 @@ def print_handshake_version(items):
     if "tls.handshake" in items:
         return items["tls.handshake"].get("tls.handshake.version")
     else : return "None"
-
-def print_tls_ciphersuite(items):
-    for query_key, query_value in items:
-        tls_output_cyphersuite = query_value.get("tls.handshake.ciphersuite")
-    return tls_output_cyphersuite
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
@@ -68,14 +58,14 @@ def json_to_udm(input_json):
         return []
 
     udm_events = []
-    protocol_map = {
+    """     protocol_map = {
         "http": "HTTP",
         "icmp": "ICMP",
         "dns": "DNS",
         "ssl": "TLS/SSL",
         "tls": "TLS/SSL",
     }
-
+ """
     for packet in packets:
         try:
             layers = packet["_source"]["layers"]
@@ -94,7 +84,7 @@ def json_to_udm(input_json):
             tls = layers.get("tls", {})
 
             # Detect application-level protocol using the protocol_map
-            protocol = next((value for key, value in protocol_map.items() if key in layers), None)
+            # protocol = next((value for key, value in protocol_map.items() if key in layers), None)
 
             event = {
                 "event": {
@@ -105,7 +95,7 @@ def json_to_udm(input_json):
                 },
                 "network": {
                     #"application_protocol" ?
-                    "transport_protocol": "TCP" if tcp else ("UDP" if udp else ("ICMP" if icmp else None)),
+                    "transport_protocol": "TCP" if tcp else ("UDP" if udp else None),
                     "ip": {
                         "source": ip.get("ip.src") ,
                         "destination": ip.get("ip.dst"),
@@ -114,7 +104,6 @@ def json_to_udm(input_json):
                     "ipv6": {
                         "source": ipv6.get("ipv6.src") ,
                         "destination": ipv6.get("ipv6.dst"),
-                        "ttl": ipv6.get("ipv6.ttl") if ipv6.get("ipv6.ttl") else None,
                     },
                     "eth": {
                         "source_mac": eth.get("eth.src"),
@@ -135,20 +124,14 @@ def json_to_udm(input_json):
                     },
                     "dns": {
                         "query": {
-                            "name": print_dns_name(dns["Queries"].items()) if "Queries" in dns else None,
-                            "type": print_dns_type(dns["Queries"].items()) if "Queries" in dns else None,
-                        },
-                         "response": {
-                            "addresses": dns.get("dns.resp.addr") if dns else None,
+                            "name": print_dns(dns["Queries"].items(), "dns.qry.name") if "Queries" in dns else None,
+                            "type": print_dns(dns["Queries"].items(), "dns.qry.type") if "Queries" in dns else None,
                         },
                     },
                     "mdns": {
                         "query": {
-                            "name": print_dns_name(mdns["Queries"].items()) if "Queries" in mdns else None,
-                            "type": print_dns_type(mdns["Queries"].items()) if "Queries" in mdns else None,
-                        },
-                         "response": {
-                            "addresses": mdns.get("dns.resp.addr") if mdns else None,
+                            "name": print_dns(mdns["Queries"].items(), "dns.qry.name") if "Queries" in mdns else None,
+                            "type": print_dns(mdns["Queries"].items(), "dns.qry.type") if "Queries" in mdns else None,
                         },
                     },
                     "http": {
@@ -157,7 +140,7 @@ def json_to_udm(input_json):
                     "tls": {
                         "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
                         "handshake": {
-                        "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
+                            "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
                         }
                     }
                 },
