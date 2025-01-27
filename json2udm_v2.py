@@ -83,6 +83,7 @@ def json_to_udm(input_json):
             http = layers.get("http", {})
             tls = layers.get("tls", {})
             arp = layers.get("arp",{})
+            # data = layers.get("data",{}) da approfondire data.len e frame.len
 
             # Detect application-level protocol using the protocol_map
             # protocol = next((value for key, value in protocol_map.items() if key in layers), None)
@@ -141,6 +142,10 @@ def json_to_udm(input_json):
                     },
                     "http": {
                         "host": http.get("http.host") if http else None,
+                        "file_data": http.get("http.file_data") if http else None,
+                        # Sviluppi futuri
+                        # "method": http.get("http.request.method") if http else None,
+                        # "uri": http.get("http.request.uri") if http else None,
                     },
                     "tls": {
                         "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
@@ -153,7 +158,8 @@ def json_to_udm(input_json):
                         "source_ipv4":  arp.get("arp.src.proto_ipv4") if arp else None,
                         "destination_mac": arp.get("arp.dst.hw_mac") if arp else None,
                         "destination_ipv4": arp.get("arp.dst.proto_ipv4") if arp else None,
-                    }
+                    },
+                    
                 },
                 "frame": {
                     "timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
