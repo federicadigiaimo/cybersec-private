@@ -27,6 +27,18 @@ def convert_timestamp(timestamp_str):
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
         return None
 
+def print_dns_name(items):
+    for query_key, query_value in items:
+        # Aggiungi i dati alla sezione query di mdns_output
+        mdns_output_name = query_value.get("dns.qry.name")
+    return mdns_output_name
+
+def print_dns_type(items):
+    for query_key, query_value in items:
+        # Aggiungi i dati alla sezione query di mdns_output
+        mdns_output_type = query_value.get("dns.qry.type")
+    return mdns_output_type
+
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
     """
@@ -61,12 +73,14 @@ def json_to_udm(input_json):
             frame = layers.get("frame", {})
             eth = layers.get("eth", {})
             ip = layers.get("ip", {})
+            ipv6 = layers.get("ipv6", {})
             tcp = layers.get("tcp", {})
             udp = layers.get("udp", {})
             icmp = layers.get("icmp", {})
             dns = layers.get("dns", {})
+            mdns = layers.get("mdns", {})
             http = layers.get("http", {})
-            ssl = layers.get("ssl", {})
+            tls = layers.get("tls", {})
 
             # Detect application-level protocol using the protocol_map
             protocol = next((value for key, value in protocol_map.items() if key in layers), None)
@@ -82,9 +96,14 @@ def json_to_udm(input_json):
                     #"application_protocol" ?
                     "transport_protocol": "TCP" if tcp else ("UDP" if udp else None),
                     "ip": {
-                        "source": ip.get("ip.src"),
+                        "source": ip.get("ip.src") ,
                         "destination": ip.get("ip.dst"),
                         "ttl": ip.get("ip.ttl") if ip.get("ip.ttl") else None,
+                    },
+                    "ipv6": {
+                        "source": ipv6.get("ipv6.src") ,
+                        "destination": ipv6.get("ipv6.dst"),
+                        "ttl": ipv6.get("ipv6.ttl") if ipv6.get("ipv6.ttl") else None,
                     },
                     "eth": {
                         "source_mac": eth.get("eth.src"),
@@ -105,21 +124,30 @@ def json_to_udm(input_json):
                     },
                     "dns": {
                         "query": {
-                            "name": dns.get("dns.qry.name") if dns else None,
-                            "type": dns.get("dns.qry.type") if dns else None,
+                            "name": print_dns_name(dns["Queries"].items()) if "Queries" in dns else None,
+                            "type": print_dns_type(dns["Queries"].items()) if "Queries" in dns else None,
                         },
                          "response": {
                             "addresses": dns.get("dns.resp.addr") if dns else None,
+                        },
+                    },
+                    "mdns": {
+                        "query": {
+                            "name": print_dns_name(mdns["Queries"].items()) if "Queries" in mdns else None,
+                            "type": print_dns_type(mdns["Queries"].items()) if "Queries" in mdns else None,
+                        },
+                         "response": {
+                            "addresses": mdns.get("dns.resp.addr") if mdns else None,
                         },
                     },
                     "http": {
                         "host": http.get("http.host") if http else None,
                         "request_uri": http.get("http.request.uri") if http else None,
                     },
-                    "ssl": {
+                    "tls": {
                         "handshake": {
-                        "version": ssl.get("ssl.handshake.version") if ssl else None,
-                        "cipher_suite": ssl.get("ssl.handshake.cipher_suite") if ssl else None,
+                        "version": tls.get("tls.handshake.version") if tls else None,
+                        "cipher_suite": tls.get("tls.handshake.cipher_suite") if tls else None,
                         }
                     }
                 },
