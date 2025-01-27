@@ -82,6 +82,8 @@ def json_to_udm(input_json):
             mdns = layers.get("mdns", {})
             http = layers.get("http", {})
             tls = layers.get("tls", {})
+            arp = layers.get("arp",{})
+            # data = layers.get("data",{}) da approfondire data.len e frame.len
 
             # Detect application-level protocol using the protocol_map
             # protocol = next((value for key, value in protocol_map.items() if key in layers), None)
@@ -125,24 +127,39 @@ def json_to_udm(input_json):
                     "dns": {
                         "query": {
                             "name": print_dns(dns["Queries"].items(), "dns.qry.name") if "Queries" in dns else None,
+                            "ttl": print_dns(dns["Answers"].items(), "dns.resp.ttl") if "Answers" in dns else None,
+                            "flags_response": print_dns(dns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in dns else None,
                             "type": print_dns(dns["Queries"].items(), "dns.qry.type") if "Queries" in dns else None,
                         },
                     },
                     "mdns": {
                         "query": {
                             "name": print_dns(mdns["Queries"].items(), "dns.qry.name") if "Queries" in mdns else None,
+                            "ttl": print_dns(mdns["Answers"].items(), "dns.resp.ttl") if "Answers" in mdns else None,
+                            "flags_response": print_dns(mdns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in mdns else None,
                             "type": print_dns(mdns["Queries"].items(), "dns.qry.type") if "Queries" in mdns else None,
                         },
                     },
                     "http": {
                         "host": http.get("http.host") if http else None,
+                        "file_data": http.get("http.file_data") if http else None,
+                        # Sviluppi futuri
+                        # "method": http.get("http.request.method") if http else None,
+                        # "uri": http.get("http.request.uri") if http else None,
                     },
                     "tls": {
                         "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
                         "handshake": {
                             "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
                         }
-                    }
+                    },
+                    "arp": {
+                        "source_mac": arp.get("arp.src.hw_mac") if arp else None,
+                        "source_ipv4":  arp.get("arp.src.proto_ipv4") if arp else None,
+                        "destination_mac": arp.get("arp.dst.hw_mac") if arp else None,
+                        "destination_ipv4": arp.get("arp.dst.proto_ipv4") if arp else None,
+                    },
+                    
                 },
                 "frame": {
                     "timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
