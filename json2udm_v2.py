@@ -94,7 +94,7 @@ def json_to_udm(input_json):
                 },
                 "network": {
                     #"application_protocol" ?
-                    "transport_protocol": "TCP" if tcp else ("UDP" if udp else None),
+                    "transport_protocol": "TCP" if tcp else ("UDP" if udp else ("ICMP" if icmp else None)),
                     "ip": {
                         "source": ip.get("ip.src") ,
                         "destination": ip.get("ip.dst"),
@@ -154,7 +154,7 @@ def json_to_udm(input_json):
                 "frame": {
                     "timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
                     "length": frame.get("frame.len") if frame.get("frame.len") else None,
-                    "protocols": protocol or frame.get("frame.protocols"),
+                    "protocols": frame.get("frame.protocols"),
                 }
             }
 
