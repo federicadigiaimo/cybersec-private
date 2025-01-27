@@ -82,6 +82,7 @@ def json_to_udm(input_json):
             mdns = layers.get("mdns", {})
             http = layers.get("http", {})
             tls = layers.get("tls", {})
+            arp = layers.get("arp",{})
 
             # Detect application-level protocol using the protocol_map
             # protocol = next((value for key, value in protocol_map.items() if key in layers), None)
@@ -142,6 +143,12 @@ def json_to_udm(input_json):
                         "handshake": {
                             "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
                         }
+                    },
+                    "arp": {
+                        "source_mac": arp.get("arp.src.hw_mac") if arp else None,
+                        "source_ipv4":  arp.get("arp.src.proto_ipv4") if arp else None,
+                        "destination_mac": arp.get("arp.dst.hw_mac") if arp else None,
+                        "destination_ipv4": arp.get("arp.dst.proto_ipv4") if arp else None,
                     }
                 },
                 "frame": {
