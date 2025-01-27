@@ -153,7 +153,6 @@ def json_to_udm(input_json):
                     },
                     "http": {
                         "host": http.get("http.host") if http else None,
-                        "request_uri": http.get("http.request.uri") if http else None,
                     },
                     "tls": {
                         "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
