@@ -71,6 +71,7 @@ def json_to_udm(input_json):
                 "event": {
                     "type": "NETWORK_CONNECTION",
                     "start_time": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
+                    "frame_len": frame.get("frame.len") if frame.get("frame.len") else None,
                 },
                 "network": {
                     "protocol": protocol or frame.get("frame.protocols"),
@@ -79,6 +80,8 @@ def json_to_udm(input_json):
                     "dst_ip": ip.get("ip.dst"),
                     "src_port": tcp.get("tcp.srcport") if tcp else (udp.get("udp.srcport") if udp else None),
                     "dst_port": tcp.get("tcp.dstport") if tcp else (udp.get("udp.dstport") if udp else None),
+                    "ip_ttl": ip.get("ip.ttl") if ip.get("ip.ttl") else None,
+                    "tcp_flags": tcp.get("tcp.flags") if tcp.get("tcp.flags") else None,
                 },
                 "source": {
                     "ip": ip.get("ip.src"),
