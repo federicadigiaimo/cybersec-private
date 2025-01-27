@@ -29,15 +29,26 @@ def convert_timestamp(timestamp_str):
 
 def print_dns_name(items):
     for query_key, query_value in items:
-        # Aggiungi i dati alla sezione query di mdns_output
         mdns_output_name = query_value.get("dns.qry.name")
     return mdns_output_name
 
 def print_dns_type(items):
     for query_key, query_value in items:
-        # Aggiungi i dati alla sezione query di mdns_output
         mdns_output_type = query_value.get("dns.qry.type")
     return mdns_output_type
+
+def print_record_version(items):
+        return items.get("tls.record.version")
+
+def print_handshake_version(items):
+    if "tls.handshake" in items:
+        return items["tls.handshake"].get("tls.handshake.version")
+    else : return "None"
+
+def print_tls_ciphersuite(items):
+    for query_key, query_value in items:
+        tls_output_cyphersuite = query_value.get("tls.handshake.ciphersuite")
+    return tls_output_cyphersuite
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
@@ -145,9 +156,9 @@ def json_to_udm(input_json):
                         "request_uri": http.get("http.request.uri") if http else None,
                     },
                     "tls": {
+                        "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
                         "handshake": {
-                        "version": tls.get("tls.handshake.version") if tls else None,
-                        "cipher_suite": tls.get("tls.handshake.cipher_suite") if tls else None,
+                        "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
                         }
                     }
                 },
