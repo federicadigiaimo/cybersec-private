@@ -126,12 +126,16 @@ def json_to_udm(input_json):
                     "dns": {
                         "query": {
                             "name": print_dns(dns["Queries"].items(), "dns.qry.name") if "Queries" in dns else None,
+                            "ttl": print_dns(dns["Answers"].items(), "dns.resp.ttl") if "Answers" in dns else None,
+                            "flags_response": print_dns(dns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in dns else None,
                             "type": print_dns(dns["Queries"].items(), "dns.qry.type") if "Queries" in dns else None,
                         },
                     },
                     "mdns": {
                         "query": {
                             "name": print_dns(mdns["Queries"].items(), "dns.qry.name") if "Queries" in mdns else None,
+                            "ttl": print_dns(mdns["Answers"].items(), "dns.resp.ttl") if "Answers" in mdns else None,
+                            "flags_response": print_dns(mdns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in mdns else None,
                             "type": print_dns(mdns["Queries"].items(), "dns.qry.type") if "Queries" in mdns else None,
                         },
                     },
