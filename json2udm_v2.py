@@ -28,7 +28,7 @@ def convert_timestamp(timestamp_str):
         return None
 
 def print_dns(items,type):
-    for query_key, query_value in items:
+    for query_value in items:
         mdns_output_name = query_value.get(type)
     return mdns_output_name
 
@@ -150,7 +150,6 @@ def json_to_udm(input_json):
                     "protocols": frame.get("frame.protocols"),
                 }
             }
-
             udm_events.append(event)
         
         except KeyError as e:
