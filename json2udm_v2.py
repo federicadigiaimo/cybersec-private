@@ -40,15 +40,6 @@ def print_handshake_version(items):
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
-    """
-    Convert Tshark JSON export to Google Chronicle JSON-UDM format.
-
-    Args:
-        input_json (str): JSON string from Tshark output.
-
-    Returns:
-        list: List of dictionaries in JSON-UDM format.
-    """
     try:
         packets = json.loads(input_json)
     except json.JSONDecodeError as e:
@@ -56,14 +47,7 @@ def json_to_udm(input_json):
         return []
 
     udm_events = []
-    """     protocol_map = {
-        "http": "HTTP",
-        "icmp": "ICMP",
-        "dns": "DNS",
-        "ssl": "TLS/SSL",
-        "tls": "TLS/SSL",
-    }
- """
+
     for packet in packets:
         try:
             layers = packet["_source"]["layers"]
@@ -81,10 +65,7 @@ def json_to_udm(input_json):
             http = layers.get("http", {})
             tls = layers.get("tls", {})
             arp = layers.get("arp",{})
-            # data = layers.get("data",{}) da approfondire data.len e frame.len
-
-            # Detect application-level protocol using the protocol_map
-            # protocol = next((value for key, value in protocol_map.items() if key in layers), None)
+#           data = layers.get("data",{}) da approfondire data.len e frame.len
 
             event = {
                 "event": {
