@@ -2,13 +2,22 @@
 
 # Script eseguito all'avvio del container, gestisce sia lo sniffing che il suo post-processing
 
-# Parametri dello sniffing con wireshark
-TSHARK_ARGS="-i eth0 -T json -b filesize:1024 -w $TSHARK_OUTPUT"
+# Interfaccia di rete (eth0 dovrebbe andare bene, standard per il container)
+INTERFACE="-i eth0"
 
-# Dichiarazione variabili
+# Possibili limiti (per test), abbastanza per mostrare la func "write_to_multiple_files()"
+LIMITS="-c 1200"
+
+# Regole di rotazione
+ROTATE="-b filesize:1024"
+
+# Percorsi e volumi
 INPUT_DIR="/input"
 OUTPUT_DIR="/output"
-TSHARK_OUTPUT="$INPUT_DIR/raw_$(date +%Y%m%d_%H%M%S)"
+TSHARK_OUTPUT="$INPUT_DIR/capture.json" #raw_$(date +%Y%m%d_%H%M%S)"
+
+# Parametri di avvio dello sniffing con wireshark
+TSHARK_ARGS="$INTEFACE -T json $ROTATE $LIMITS -w $TSHARK_OUTPUT"
 
 # Funzione per processare un file
 process_file() {
@@ -50,6 +59,14 @@ inotifywait -m -e create --format '%w%f' "$INPUT_DIR" | while read NEW_FILE; do
     if [[ "$NEW_FILE" == "$INPUT_DIR/$TSHARK_OUTPUT"* ]]; then
         process_file "$NEW_FILE"
     fi
+done
+
+# Monitora nuovi file completati in scrittura
+inotifywait -m -e close_write --format "%w%f" "$capture_dir" | while read new_file; do
+  echo "File completato: $new_file"
+  # Esegui azioni sul file, ad esempio rinominalo o processalo
+  timestamp=$(date +%Y%m%d_%H%M%S)
+  mv "$new_file" "${new_file%_*}_$timestamp.pcap"
 done
 
 # Gestisce la terminazione di tshark (se necessario)
