@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY json2udm.py /app/json2udm.py
-COPY ingestion_comm.py /app/ingestion_comm.py
+#COPY ingestion_comm.py /app/ingestion_comm.py
 COPY entrypoint.sh /app/entrypoint.sh
 
 RUN chmod +x /app/entrypoint.sh
