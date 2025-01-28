@@ -1,19 +1,9 @@
 version: '3.7'
 services:
-  wireshark-parser:
+  wireshark2chronicle:
     build: .
     volumes:
-      - ./input:/input
-      - ./output:/output
-    cap_add:
-      - NET_ADMIN  # Permessi per eseguire tshark
-      - NET_RAW
+      - ./input:/app/sniff
+      - ./trash:/app/processed
+      - ./output:/app/chronicle
     network_mode: "host"
-    depends_on:
-      - wait-for-input
-
-  wait-for-input: # fa aspettare l'altro che "input" esista
-    image: busybox:latest
-    volumes:
-      - ./input:/input
-    command: ["sh", "-c", "while [ ! -d /input ]; do sleep 1; done; echo 'Input directory ready'"]

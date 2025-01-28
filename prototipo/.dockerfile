@@ -6,9 +6,10 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY json2udm_parser.py /app/json2udm_parser.py
-COPY monitor_files.sh /app/monitor_files.sh
+COPY json2udm.py /app/json2udm.py
+COPY ingestion_comm.py /app/ingestion_comm.py
+COPY entrypoint.sh /app/entrypoint.sh
 
-RUN chmod +x /app/monitor_files.sh
+RUN chmod +x /app/entrypoint.sh
 
-ENTRYPOINT ["/app/monitor_files.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
