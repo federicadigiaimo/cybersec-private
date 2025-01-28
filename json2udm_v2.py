@@ -97,35 +97,35 @@ def json_to_udm(input_json):
                     **({"transport_protocol": "TCP" if tcp else "UDP"} if tcp or udp else {}),
 
                     **({"ip": {
-                        "source": ip.get("ip.src") ,
-                        "destination": ip.get("ip.dst"),
+                        **({"source": ip.get("ip.src")} if ip.get("ip.src") else {}),
+                        **({"destination": ip.get("ip.dst")} if ip.get("ip.dst") else {}),
                         **({"ttl": ip.get("ip.ttl")} if ip.get("ip.ttl") else {}),
                     }} if ip else {}),
                     
                     **({"ipv6": {
-                        "source": ipv6.get("ipv6.src") ,
-                        "destination": ipv6.get("ipv6.dst"),
+                        **({"source": ipv6.get("ipv6.src")} if ipv6.get("ipv6.src") else {}),
+                        **({"destination": ipv6.get("ipv6.dst")} if ipv6.get("ipv6.dst") else {}),
                     }} if ipv6 else {}),
                     
                     **({"eth": {
-                        "source_mac": eth.get("eth.src"),
-                        "destination_mac": eth.get("eth.dst"),
+                        **({"source_mac": eth.get("eth.src")} if eth.get("eth.src") else {}),
+                        **({ "destination_mac": eth.get("eth.dst")} if eth.get("eth.dst") else {}),
                     }} if eth else {}),
                     
                     **({"udp": {
-                        "source_port": udp.get("udp.srcport"),
-                        "destination_port": udp.get("udp.dstport"),
+                        **({"source_port": udp.get("udp.srcport")} if udp.get("udp.srcport") else {}),
+                        **({"destination_port": udp.get("udp.dstport")} if udp.get("udp.dstport") else {}),
                     }} if udp else {}),
                     
                     **({"tcp": {
-                        "source_port": tcp.get("tcp.srcport"),
-                        "destination_port": tcp.get("tcp.dstport"),
+                         **({"source_port": tcp.get("tcp.srcport")} if tcp.get("tcp.srcport") else {}),
+                        **({"destination_port": tcp.get("tcp.dstport")} if tcp.get("tcp.dstport") else {}),
                         **({"flags": tcp.get("tcp.flags")} if tcp.get("tcp.flags") else {}),
                     }} if tcp else {}),
                     
                      **({"icmp": {
-                        "type": icmp.get("icmp.type"),
-                        "code": icmp.get("icmp.code"),
+                         **({"type": icmp.get("icmp.type")} if icmp.get("icmp.type") else {}),
+                         **({"code": icmp.get("icmp.code")} if icmp.get("icmp.code") else {}),
                     }} if icmp else {}),
                     
                     **({"dns": {
@@ -168,10 +168,10 @@ def json_to_udm(input_json):
                     }} if tls else {}),
                     
                     **({"arp": {
-                        "source_mac": arp.get("arp.src.hw_mac"),
-                        "source_ipv4":  arp.get("arp.src.proto_ipv4"),
-                        "destination_mac": arp.get("arp.dst.hw_mac"),
-                        "destination_ipv4": arp.get("arp.dst.proto_ipv4"),
+                         **({"source_mac": arp.get("arp.src.hw_mac")} if arp.get("arp.src.hw_mac") else {}),
+                         **({"source_ipv4":  arp.get("arp.src.proto_ipv4")} if arp.get("arp.src.proto_ipv4") else {}),
+                         **({"destination_mac": arp.get("arp.dst.hw_mac")} if arp.get("arp.dst.hw_mac") else {}),
+                         **({"destination_ipv4": arp.get("arp.dst.proto_ipv4")} if arp.get("arp.dst.proto_ipv4") else {}),
                     }} if arp else {}),
                     
                     **({"frame": {
