@@ -17,40 +17,49 @@ TRASH_DIR="/app/trash"      # una volta tradotti in json, i pcap vanno qui
 MID_DIR="/app/jsonized"     # i json pronti per parsing UDM
 OUTPUT_DIR="/app/output"    # file pronti per chronicle
 
-# Parametri di avvio dello sniffing con wireshark
-TSHARK_ARGS="$INTERFACE $ROTATE $LIMITS -w $INPUT_DIR/capture.pcap"
 
 # Funzione per processare un file
 process_file() {
     local FILE="$(basename "$1" .pcap)"
 
     # Fase 1: pcap -> json (sposto il file in trash se andato a buon fine)
-    tshark -r "$1" -T json > "$MID_DIR/$FILE.json" && mv "$1" $TRASH_DIR/
+    if tshark -r "$1" -T json > "$MID_DIR/$FILE.json"; then
+        mv "$1" "$TRASH_DIR/"
+    else
+        echo "Errore nella conversione del file $1"
+        return 1
+    fi
   
     # Fase 2: json -> UDM (sposto il file in output se andato a buon fine)
-    python3 /app/json2udm.py "$MID_DIR/$FILE.json" "$OUTPUT_DIR/$FILE.json"
-
-    if [[ $? -eq 0 ]]; then
-        echo "Processing successful, removing file: "$MID_DIR/$FILE.json""
-        rm "$MID_DIR/$FILE.json" # Rimuovi il file solo se l'elaborazione è andata a buon fine
+    if python3 /app/json2udm.py "$MID_DIR/$FILE.json" "$OUTPUT_DIR/$FILE.json"; then
+        echo "Processing successful, removing file: $MID_DIR/$FILE.json"
+        rm "$MID_DIR/$FILE.json"
     else
-        echo "Error processing file: "$MID_DIR/$FILE.json". Keeping the original file."
+        echo "Error processing file: $MID_DIR/$FILE.json. Keeping the original file."
     fi
 }
+
+# Verifica che le directory esistano
+for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
+  if [ ! -d "$DIR" ]; then
+    echo "Directory $DIR non trovata. Creazione..."
+    mkdir -p "$DIR"
+  fi
+done
 
 # Gestione dell'errore nel caso di terminazione prematura di tshark
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
 
 # Avvia tshark in background
 echo "Starting tshark..."
-tshark $TSHARK_ARGS &
+tshark $INTERFACE $ROTATE $LIMITS -w $INPUT_DIR/capture.pcap &
 TSHARK_PID=$!
 
 # Log conferma
-echo "Starting tshark with args: $TSHARK_ARGS"
+echo "Starting tshark on interface $INTERFACE with args: $ROTATE $LIMITS"
 
 # Monitora nuovi file completati in scrittura
-inotifywait -m -e close_write --format "%w%f" "$INPUT_DIR" | while read NEW_FILE; do
+inotifywait -m -e close_write --format "%w%f" "$INPUT_DIR" | while read -r NEW_FILE; do
   echo "File completato: $NEW_FILE"
   process_file "$NEW_FILE"
 done
