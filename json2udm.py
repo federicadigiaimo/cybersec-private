@@ -104,7 +104,7 @@ def json_to_udm(input_json):
                         **({"flags": tcp.get("tcp.flags")} if tcp.get("tcp.flags") else {}),
                     }} if tcp else {}),
                     
-                     **({"icmp": {
+                    **({"icmp": {
                          **({"type": icmp.get("icmp.type")} if icmp.get("icmp.type") else {}),
                          **({"code": icmp.get("icmp.code")} if icmp.get("icmp.code") else {}),
                     }} if icmp else {}),
@@ -149,16 +149,20 @@ def json_to_udm(input_json):
                     }} if tls else {}),
                     
                     **({"arp": {
-                         **({"source_mac": arp.get("arp.src.hw_mac")} if arp.get("arp.src.hw_mac") else {}),
-                         **({"source_ipv4":  arp.get("arp.src.proto_ipv4")} if arp.get("arp.src.proto_ipv4") else {}),
-                         **({"destination_mac": arp.get("arp.dst.hw_mac")} if arp.get("arp.dst.hw_mac") else {}),
-                         **({"destination_ipv4": arp.get("arp.dst.proto_ipv4")} if arp.get("arp.dst.proto_ipv4") else {}),
+                         **({"source_mac": arp.get("arp.src.hw_mac")} 
+                            if arp.get("arp.src.hw_mac") else {}),
+                         **({"source_ipv4":  arp.get("arp.src.proto_ipv4")} 
+                            if arp.get("arp.src.proto_ipv4") else {}),
+                         **({"destination_mac": arp.get("arp.dst.hw_mac")} 
+                            if arp.get("arp.dst.hw_mac") else {}),
+                         **({"destination_ipv4": arp.get("arp.dst.proto_ipv4")} 
+                            if arp.get("arp.dst.proto_ipv4") else {}),
                     }} if arp else {}),
                     
                     **({"frame": {
-                    **({"timestamp": convert_timestamp(frame.get("frame.time_utc"))} if frame.get("frame.time_utc") else {}),
-                    **({"length": frame.get("frame.len")} if frame.get("frame.len") else {}),
-                    **({"protocols": frame.get("frame.protocols")} if frame.get("frame.protocols") else {}),
+                        **({"timestamp": convert_timestamp(frame.get("frame.time_utc"))} if frame.get("frame.time_utc") else {}),
+                        **({"length": frame.get("frame.len")} if frame.get("frame.len") else {}),
+                        **({"protocols": frame.get("frame.protocols")} if frame.get("frame.protocols") else {}),
                     }} if frame else {}),
                 }
             }
