@@ -17,13 +17,13 @@ TRASH_DIR="/app/trash"      # una volta tradotti in json, i pcap vanno qui
 MID_DIR="/app/jsonized"     # i json pronti per parsing UDM
 OUTPUT_DIR="/app/output"    # file pronti per chronicle
 
-
 # Funzione per processare un file
 process_file() {
-    local FILE="$(basename "$1" .pcap)"
+    # Ottengo il percorso relativo del file e ci aggiungo l'estensione .json
+    local FILE="$(basename "$1" .pcap).json"
 
     # Fase 1: pcap -> json (sposto il file in trash se andato a buon fine)
-    if tshark -r "$1" -T json > "$MID_DIR/$FILE.json"; then
+    if tshark -r "$1" -T json > "$MID_DIR/$FILE"; then
         mv "$1" "$TRASH_DIR/"
     else
         echo "Errore nella conversione del file $1"
@@ -31,11 +31,11 @@ process_file() {
     fi
   
     # Fase 2: json -> UDM (sposto il file in output se andato a buon fine)
-    if python3 /app/json2udm.py "$MID_DIR/$FILE.json" "$OUTPUT_DIR/$FILE.json"; then
-        echo "Processing successful, removing file: $MID_DIR/$FILE.json"
-        rm "$MID_DIR/$FILE.json"
+    if python3 /app/json2udm.py "$MID_DIR/$FILE" "$OUTPUT_DIR/$FILE"; then
+        echo "Processing successful, removing file: $MID_DIR/$FILE"
+        rm "$MID_DIR/$FILE"
     else
-        echo "Error processing file: $MID_DIR/$FILE.json. Keeping the original file."
+        echo "Error processing file: $MID_DIR/$FILE. Keeping the original file."
     fi
 }
 
