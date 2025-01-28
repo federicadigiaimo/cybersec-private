@@ -6,10 +6,10 @@
 INTERFACE="-i eth0"
 
 # Possibili limiti (per test), abbastanza per mostrare la func "write_to_multiple_files()"
-LIMITS="-c 2000"
+LIMITS="${LIMITS:-"-c 20000"}"
 
-# Regole di rotazione
-ROTATE="-b filesize:1024"
+# Regole di rotazione predefinite
+ROTATE="${ROTATE:-"-b filesize:10240"}"
 
 # Percorsi e volumi
 INPUT_DIR="/app/input"      # qui vengono messe le catture

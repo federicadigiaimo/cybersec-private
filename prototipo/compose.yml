@@ -2,8 +2,11 @@ version: '3.7'
 services:
   wireshark2chronicle:
     build: .
+    network_mode: "host"
     volumes:
       - ./input:/app/sniff
       - ./trash:/app/processed
       - ./output:/app/chronicle
-    network_mode: "host"
+    environment:
+      - ROTATE="-b filesize:1024"
+      - LIMITS="-c 20000"

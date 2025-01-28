@@ -73,11 +73,14 @@ Lo script `entrypoint.sh` è il cuore del pipeline, gestendo l'acquisizione dei 
 
 ### Variabili di configurazione
 
-Le seguenti variabili possono essere configurate nel file `entrypoint.sh`:
+L'interfaccia di rete dell'host su cui eseguire lo sniffing può essere configurate nel file `entrypoint.sh`:
 
 - **`INTERFACE`**: Interfaccia di rete da cui acquisire il traffico. (Default: `eth0`)
-- **`LIMITS`**: Limiti per il numero di pacchetti da acquisire. (Default: `-c 2000`)
-- **`ROTATE`**: Opzioni di rotazione per la cattura dei file. (Default: `-b filesize:1024`)
+
+Le seguenti variabili possono essere configurate nel file `compose.yml`:
+
+- **`LIMITS`**: Limiti per il numero di pacchetti da acquisire. (Default: `-c 20000`)
+- **`ROTATE`**: Opzioni di rotazione per la cattura dei file. (Default: `-b filesize:10240`)
 
 ### Dipendenze
 
