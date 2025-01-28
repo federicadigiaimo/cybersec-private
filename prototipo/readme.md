@@ -16,7 +16,7 @@ Questo progetto automatizza il processo di acquisizione dei pacchetti di rete tr
 
 ### Docker e Docker Compose
 
-Il progetto è gestito tramite Docker, con un file `docker-compose.yml` che definisce il servizio necessario per eseguire il pipeline.
+Il progetto è gestito tramite Docker, con un file `compose.yml` che definisce il servizio necessario per eseguire il pipeline.
 
 - Il contenitore esegue `tshark` per catturare il traffico di rete.
 - Dopo la cattura, i file pcap vengono convertiti in JSON tramite uno script Python.
