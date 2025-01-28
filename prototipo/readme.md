@@ -1,7 +1,3 @@
-Ecco un esempio di `README.md` per il tuo progetto:
-
----
-
 # Wireshark to Chronicle Pipeline
 
 Questo progetto automatizza il processo di acquisizione dei pacchetti di rete tramite Wireshark (`tshark`), la loro conversione in formato JSON, e l'ulteriore trasformazione in un formato compatibile con Chronicle per l'analisi dei dati. Utilizza Docker per creare un ambiente isolato e gestire tutte le operazioni in modo efficiente.
@@ -90,11 +86,3 @@ Il contenitore Docker include le seguenti dipendenze:
 - `tshark` (Wireshark) per la cattura dei pacchetti di rete.
 - `inotify-tools` per il monitoraggio delle modifiche ai file.
 - `python` per l'elaborazione dei file JSON.
-
-## License
-
-Distribuito sotto la MIT License. Vedi `LICENSE` per maggiori dettagli.
-
----
-
-Questo README fornisce una panoramica completa del progetto, della sua configurazione e delle operazioni di base. Puoi modificarlo ulteriormente in base alle tue necessità!
