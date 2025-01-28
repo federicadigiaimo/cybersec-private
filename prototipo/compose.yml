@@ -4,9 +4,9 @@ services:
     build: .
     network_mode: "host"
     volumes:
-      - ./input:/app/sniff
-      - ./trash:/app/processed
-      - ./output:/app/chronicle
+      - ./sniff:/app/input
+      - ./processed:/app/trash
+      - ./chronicle:/app/output
     environment:
       - ROTATE="-b filesize:1024"
       - LIMITS="-c 20000"
