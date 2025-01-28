@@ -2,507 +2,691 @@
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:03+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:03.199000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0002"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:03.199000+00:00",
+                "length": "78",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:03+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:03.199000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0012"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:03.199000+00:00",
+                "length": "74",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:03+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:03.201000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:03.201000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:11+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:11.691000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:11.691000+00:00",
+                "length": "76",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:11+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:11.691000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:11.691000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:15+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:15.290000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:15.290000+00:00",
+                "length": "67",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:15+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:15.290000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:15.290000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:17+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:17.008000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:17.008000+00:00",
+                "length": "75",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:17+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:17.008000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:17.008000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:20+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:20.874000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:20.874000+00:00",
+                "length": "83",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:20+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:20.874000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:20.874000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:21+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:21.628000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:21.628000+00:00",
+                "length": "67",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:21+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:21.628000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:21.628000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:31+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:31.202000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:31.202000+00:00",
+                "length": "89",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:31+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:31.202000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:31.202000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:31+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:31.969000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:31.969000+00:00",
+                "length": "67",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:31+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:31.969000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:31.969000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:33+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:33.266000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp:data",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0018"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:33.266000+00:00",
+                "length": "71",
+                "protocols": "eth:ethertype:ip:tcp:data"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:33+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:33.266000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:33.266000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:35+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:35.146000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0011"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:35.146000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:35+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:35.146000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0011"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:35.146000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:35+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:35.150000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.116",
-            "dst_ip": "192.168.1.114",
-            "src_port": "56044",
-            "dst_port": "12345"
-        },
-        "source": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
-        },
-        "destination": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.116",
+                "destination": "192.168.1.114",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "7c:d1:c3:84:4f:9c",
+                "destination_mac": "08:60:6e:81:57:d9"
+            },
+            "tcp": {
+                "source_port": "56044",
+                "destination_port": "12345",
+                "flags": "0x0010"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:35.150000+00:00",
+                "length": "66",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": "2024-12-20T16:04:35+00:00"
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2024-12-20T16:04:35.150000+00:00"
         },
         "network": {
-            "protocol": "eth:ethertype:ip:tcp",
-            "transport": "TCP",
-            "src_ip": "192.168.1.114",
-            "dst_ip": "192.168.1.116",
-            "src_port": "12345",
-            "dst_port": "56044"
-        },
-        "source": {
-            "ip": "192.168.1.114",
-            "mac": "08:60:6e:81:57:d9"
-        },
-        "destination": {
-            "ip": "192.168.1.116",
-            "mac": "7c:d1:c3:84:4f:9c"
+            "transport_protocol": "TCP",
+            "ip": {
+                "source": "192.168.1.114",
+                "destination": "192.168.1.116",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "08:60:6e:81:57:d9",
+                "destination_mac": "7c:d1:c3:84:4f:9c"
+            },
+            "tcp": {
+                "source_port": "12345",
+                "destination_port": "56044",
+                "flags": "0x0004"
+            },
+            "frame": {
+                "timestamp": "2024-12-20T16:04:35.150000+00:00",
+                "length": "54",
+                "protocols": "eth:ethertype:ip:tcp"
+            }
         }
     }
 ]

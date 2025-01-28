@@ -2,551 +2,201 @@
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     },
     {
         "event": {
             "type": "NETWORK_CONNECTION",
-            "start_time": null
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture"
         },
-        "network": {
-            "protocol": null,
-            "transport": null,
-            "src_ip": null,
-            "dst_ip": null,
-            "src_port": null,
-            "dst_port": null
-        },
-        "source": {
-            "ip": null,
-            "mac": null
-        },
-        "destination": {
-            "ip": null,
-            "mac": null
-        }
+        "network": {}
     }
 ]

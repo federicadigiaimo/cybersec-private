@@ -4,7 +4,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.463000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -13,61 +13,26 @@
                 "destination": "216.58.209.46",
                 "ttl": "64"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "80:91:33:31:60:93",
                 "destination_mac": "3c:37:12:40:fc:a2"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "50718",
                 "destination_port": "443",
                 "flags": "0x0018"
-            },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
             },
             "tls": {
                 "version": "0x0301",
                 "handshake": {
                     "version": "0x0303"
                 }
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.463000+00:00",
+                "length": "583",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "583",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -75,7 +40,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.580000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -84,61 +49,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.580000+00:00",
+                "length": "2866",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "2866",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -146,7 +73,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.580000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -155,61 +82,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.580000+00:00",
+                "length": "1066",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "1066",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -217,7 +106,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.583000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -226,61 +115,23 @@
                 "destination": "216.58.209.46",
                 "ttl": "64"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "80:91:33:31:60:93",
                 "destination_mac": "3c:37:12:40:fc:a2"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "50718",
                 "destination_port": "443",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.583000+00:00",
+                "length": "146",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "146",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -288,7 +139,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.584000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -297,61 +148,23 @@
                 "destination": "216.58.209.46",
                 "ttl": "64"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "80:91:33:31:60:93",
                 "destination_mac": "3c:37:12:40:fc:a2"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "50718",
                 "destination_port": "443",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.584000+00:00",
+                "length": "152",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "152",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -359,7 +172,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.584000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -368,61 +181,23 @@
                 "destination": "216.58.209.46",
                 "ttl": "64"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "80:91:33:31:60:93",
                 "destination_mac": "3c:37:12:40:fc:a2"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "50718",
                 "destination_port": "443",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.584000+00:00",
+                "length": "124",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "124",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -430,7 +205,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.596000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -439,61 +214,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.596000+00:00",
+                "length": "714",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "714",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -501,7 +238,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.596000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -510,61 +247,23 @@
                 "destination": "216.58.209.46",
                 "ttl": "64"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "80:91:33:31:60:93",
                 "destination_mac": "3c:37:12:40:fc:a2"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "50718",
                 "destination_port": "443",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.596000+00:00",
+                "length": "97",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "97",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -572,7 +271,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.597000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -581,61 +280,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.597000+00:00",
+                "length": "97",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "97",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -643,7 +304,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.785000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -652,61 +313,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.785000+00:00",
+                "length": "485",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "485",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -714,7 +337,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.785000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -723,61 +346,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.785000+00:00",
+                "length": "317",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "317",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -785,7 +370,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.785000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -794,61 +379,23 @@
                 "destination": "216.58.209.46",
                 "ttl": "64"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "80:91:33:31:60:93",
                 "destination_mac": "3c:37:12:40:fc:a2"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "50718",
                 "destination_port": "443",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.785000+00:00",
+                "length": "90",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "90",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -856,7 +403,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.787000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -865,61 +412,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.787000+00:00",
+                "length": "97",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "97",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     },
     {
@@ -927,7 +436,7 @@
             "type": "NETWORK_CONNECTION",
             "vendor_name": "Wireshark",
             "product_name": "Wireshark PacketCapture",
-            "event_timestamp": "2025-01-27T11:07:15+00:00"
+            "event_timestamp": "2025-01-27T11:07:15.787000+00:00"
         },
         "network": {
             "transport_protocol": "TCP",
@@ -936,61 +445,23 @@
                 "destination": "192.168.178.30",
                 "ttl": "120"
             },
-            "ipv6": {
-                "source": null,
-                "destination": null,
-                "ttl": null
-            },
             "eth": {
                 "source_mac": "3c:37:12:40:fc:a2",
                 "destination_mac": "80:91:33:31:60:93"
-            },
-            "udp": {
-                "source_port": null,
-                "destination_port": null
             },
             "tcp": {
                 "source_port": "443",
                 "destination_port": "50718",
                 "flags": "0x0018"
             },
-            "icmp": {
-                "type": null,
-                "code": null
-            },
-            "dns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "mdns": {
-                "query": {
-                    "name": null,
-                    "type": null
-                },
-                "response": {
-                    "addresses": null
-                }
-            },
-            "http": {
-                "host": null,
-                "request_uri": null
-            },
             "tls": {
-                "version": "0x0303",
-                "handshake": {
-                    "version": "None"
-                }
+                "version": "0x0303"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:07:15.787000+00:00",
+                "length": "105",
+                "protocols": "eth:ethertype:ip:tcp:tls"
             }
-        },
-        "frame": {
-            "timestamp": "2025-01-27T11:07:15+00:00",
-            "length": "105",
-            "protocols": "eth:ethertype:ip:tcp:tls"
         }
     }
 ]
