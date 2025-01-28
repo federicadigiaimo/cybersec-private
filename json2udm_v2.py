@@ -36,7 +36,7 @@ def print_record_version(items):
 def print_handshake_version(items):
     if "tls.handshake" in items:
         return items["tls.handshake"].get("tls.handshake.version")
-    else : return "None"
+    else : return None
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
@@ -99,7 +99,7 @@ def json_to_udm(input_json):
                     **({"ip": {
                         "source": ip.get("ip.src") ,
                         "destination": ip.get("ip.dst"),
-                         **({"ttl": ip.get("ip.ttl")} if ip.get("ip.ttl") else {}),
+                        **({"ttl": ip.get("ip.ttl")} if ip.get("ip.ttl") else {}),
                     }} if ip else {}),
                     
                     **({"ipv6": {
@@ -130,34 +130,41 @@ def json_to_udm(input_json):
                     
                     **({"dns": {
                         **({"query": {
-                            **({"name": print_dns(dns["Queries"].items(), "dns.qry.name")} if "Queries" in dns else {}),
-                            **({"ttl": print_dns(dns["Answers"].items(), "dns.resp.ttl")} if "Answers" in dns else {}),
-                            **({"flags_response": print_dns(dns["dns.flags_tree"].items(), "dns.flags.response")} if "dns.flags_tree" in dns else {}),
-                            **({"type": print_dns(dns["Queries"].items(), "dns.qry.type")} if "Queries" in dns else {}),
+                            **({"name": print_dns(dns["Queries"].items(), "dns.qry.name")}
+                                if "Queries" in dns and print_dns(dns["Queries"].items(), "dns.qry.name") is not None else {}),
+                            **({"ttl": print_dns(dns["Answers"].items(), "dns.resp.ttl")}
+                                if "Answers" in dns and print_dns(dns["Answers"].items(), "dns.resp.ttl") is not None else {}),
+                            **({"flags_response": print_dns(dns["dns.flags_tree"].items(), "dns.flags.response")}
+                                if "dns.flags_tree" in dns and print_dns(dns["dns.flags_tree"].items(), "dns.flags.response") is not None else {}),
+                            **({"type": print_dns(dns["Queries"].items(), "dns.qry.type")}
+                                if "Queries" in dns and print_dns(dns["Queries"].items(), "dns.qry.type") is not None else {}),
                         }} if any(key in dns for key in ["Queries", "Answers", "dns.flags_tree"]) else {}),
                     }} if dns else {}),
+
                     
                     **({"mdns": {
                         **({"query": {
-                            **({"name": print_dns(mdns["Queries"].items(), "dns.qry.name")} if "Queries" in mdns else {}),
-                            **({"ttl": print_dns(mdns["Answers"].items(), "dns.resp.ttl")} if "Answers" in mdns else {}),
-                            **({"type": print_dns(mdns["Queries"].items(), "dns.qry.type")} if "Queries" in mdns else {}),
-                        }} if "Queries" in mdns or "Answers" in mdns else {}),
+                            **({"name": print_dns(mdns["Queries"].items(), "dns.qry.name")}
+                                if "Queries" in mdns and print_dns(mdns["Queries"].items(), "dns.qry.name") is not None else {}),
+                            **({"ttl": print_dns(mdns["Answers"].items(), "dns.resp.ttl")}
+                                if "Answers" in mdns and print_dns(mdns["Answers"].items(), "dns.resp.ttl") is not None else {}),
+                            **({"type": print_dns(mdns["Queries"].items(), "dns.qry.type")}
+                                if "Queries" in mdns and print_dns(mdns["Queries"].items(), "dns.qry.type") is not None else {}),
+                        }} if any(key in mdns for key in ["Queries", "Answers"]) else {}),
                     }} if mdns else {}),
                     
                     **({"http": {
-                        "host": http.get("http.host"),
-                        "file_data": http.get("http.file_data"),
-                        # Sviluppi futuri
-                        # "method": http.get("http.request.method") if http else None,
-                        # "uri": http.get("http.request.uri") if http else None,
+                        **({"host": http.get("http.host")} if http.get("http.host") else {}),
+                        **({"file_data": http.get("http.file_data")} if http.get("file_data") else {}),
+#                        **({"method": http.get("http.request.method")} if http.get("http.request.method") else {}),
+#                        **({"uri": http.get("http.request.uri")} if http.get("http.request.uri") else {}),
                     }} if http else {}),
                     
                     **({"tls": {
                         **({"version":  print_record_version(tls["tls.record"])} if tls and "tls.record" in tls else {}), 
                         **({"handshake": {
                             "version": print_handshake_version(tls["tls.record"])
-                        }} if tls and "tls.record" in tls else {}),
+                        }} if "tls.record" in tls and print_handshake_version(tls["tls.record"]) is not None else {}),
                     }} if tls else {}),
                     
                     **({"arp": {
@@ -167,11 +174,11 @@ def json_to_udm(input_json):
                         "destination_ipv4": arp.get("arp.dst.proto_ipv4"),
                     }} if arp else {}),
                     
-                    "frame": {
+                    **({"frame": {
                     **({"timestamp": convert_timestamp(frame.get("frame.time_utc"))} if frame.get("frame.time_utc") else {}),
                     **({"length": frame.get("frame.len")} if frame.get("frame.len") else {}),
-                    "protocols": frame.get("frame.protocols"),
-                    }
+                    **({"protocols": frame.get("frame.protocols")} if frame.get("frame.protocols") else {}),
+                    }} if frame else {}),
                 }
             }
             udm_events.append(event)

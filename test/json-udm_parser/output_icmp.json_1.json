@@ -1,0 +1,450 @@
+[
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:54.433000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:54.433000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:54.448000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:54.448000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:55.435000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:55.435000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:55.443000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:55.443000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:56.436000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:56.436000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:56.450000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:56.450000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:57.438000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:57.438000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:57.449000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:57.449000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:58.440000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:58.440000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:58.451000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:58.451000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:59.442000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:59.442000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:05:59.452000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:05:59.452000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:06:00.444000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:06:00.444000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:06:00.459000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:06:00.459000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:06:01.445000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "192.168.178.30",
+                "destination": "216.58.209.46",
+                "ttl": "64"
+            },
+            "eth": {
+                "source_mac": "80:91:33:31:60:93",
+                "destination_mac": "3c:37:12:40:fc:a2"
+            },
+            "icmp": {
+                "type": "8",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:06:01.445000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    },
+    {
+        "event": {
+            "type": "NETWORK_CONNECTION",
+            "vendor_name": "Wireshark",
+            "product_name": "Wireshark PacketCapture",
+            "event_timestamp": "2025-01-27T11:06:01.458000+00:00"
+        },
+        "network": {
+            "ip": {
+                "source": "216.58.209.46",
+                "destination": "192.168.178.30",
+                "ttl": "116"
+            },
+            "eth": {
+                "source_mac": "3c:37:12:40:fc:a2",
+                "destination_mac": "80:91:33:31:60:93"
+            },
+            "icmp": {
+                "type": "0",
+                "code": "0"
+            },
+            "frame": {
+                "timestamp": "2025-01-27T11:06:01.458000+00:00",
+                "length": "98",
+                "protocols": "eth:ethertype:ip:icmp:data"
+            }
+        }
+    }
+]
