@@ -2,6 +2,7 @@ import pyshark
 import json
 import sys
 from datetime import datetime, timezone
+import time
 
 # Maximum size for JSON file (1MB)
 MAX_SIZE = 1024 * 1024
@@ -16,13 +17,18 @@ def extract_pcap_data(pcap_file, output_json_file):
         Analyzes the PCAP file and converts the packet data into a structured JSON format  
         Saves the data into a JSON file, ensuring that the final size does not exceed the maximum limit of 1 MB  
     """
+    start_time = time.time()  # Start measuring the execution time
+    
     cap = pyshark.FileCapture(pcap_file)
     extracted_data = []  # List to store the data extracted from the packets 
 
+    # number of processed packets
+    packet_count = 0
 
     # We iterate through all the packets in the PCAP file  
     # For each packet, we extract details from the various layers and add them to the 'extracted_data' list
     for packet in cap:
+        packet_count += 1  # Increments packets count
         packet_info = {
             "event": {
                 "type": "network_traffic",
@@ -89,8 +95,13 @@ def extract_pcap_data(pcap_file, output_json_file):
     with open(output_json_file, 'w') as json_file:
         json_file.write(json_string)
 
-    print(f"File JSON creato: {output_json_file} (Dimensione: {size_in_bytes} bytes)")
+    # Execution time
+    execution_time = time.time() - start_time
 
+    print(f"File JSON creato: {output_json_file} (Dimensione: {size_in_bytes} bytes)")
+    print(f"Numero di pacchetti esaminati: {packet_count}")
+    print(f"Tempo di esecuzione: {execution_time:.2f} secondi")
+    
 # Main execution block
 if __name__ == "__main__":
     # Verify command line arguments

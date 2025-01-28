@@ -2,6 +2,7 @@ from scapy.all import rdpcap
 from datetime import datetime
 import json
 import sys
+import time
 
 # Maximum size for JSON file (1MB)
 MAX_SIZE = 1024 * 1024
@@ -22,12 +23,18 @@ def format_time(timestamp):
     return dt.isoformat(timespec='seconds')  # RFC 3339 requires a precise format down to the seconds
 
 def extract_pcap_data_with_scapy(pcap_file, output_json_file):
+    start_time = time.time()  # Start measuring the execution time
+    
     packets = rdpcap(pcap_file)  # Reads the packets from the pcap file
     extracted_data = []
+    
+    # number of processed packets
+    packet_count = 0
 
     # We iterate through all the packets in the PCAP file  
     # For each packet, we extract details from the various layers and add them to the 'extracted_data' list
     for packet in packets:
+        packet_count += 1  # Increments packets count
         packet_info = {
             "event": {
                 "type": "network_traffic",
@@ -103,7 +110,13 @@ def extract_pcap_data_with_scapy(pcap_file, output_json_file):
     with open(output_json_file, 'w') as json_file:
         json_file.write(json_string)
 
+    # Execution time
+    execution_time = time.time() - start_time
+
+    # Print the number of packets and the execution time
     print(f"File JSON creato: {output_json_file} (Dimensione: {size_in_bytes} bytes)")
+    print(f"Numero di pacchetti esaminati: {packet_count}")
+    print(f"Tempo di esecuzione: {execution_time:.2f} secondi")
 
 # Main execution block
 if __name__ == "__main__":

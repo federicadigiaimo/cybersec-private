@@ -3,6 +3,7 @@ import json
 import socket
 import sys
 from datetime import datetime, timezone
+import time
 
 # Maximum size for JSON file (1MB)
 MAX_SIZE = 1024 * 1024
@@ -21,14 +22,20 @@ def format_time_rfc3339(timestamp):
     return dt.isoformat(timespec='seconds')  # Format RFC 3339 (preciso fino ai secondi)
 
 def extract_pcap_with_dpkt(pcap_file, output_json_file):
+    start_time = time.time()  # Start measuring the execution time
+    
     # Open the pcap file and create a dpkt reader to parse the packets
     with open(pcap_file, 'rb') as f:
         pcap = dpkt.pcap.Reader(f) 
         extracted_data = []
+        
+        # number of processed packets
+        packet_count = 0
 
         # We iterate through all the packets in the PCAP file  
         # For each packet, we extract details from the various layers and add them to the 'extracted_data' list
         for timestamp, buf in pcap:
+            packet_count += 1  # Increments packets count
             packet_info = {
                 "event": {
                     "type": "network_traffic",
@@ -117,8 +124,13 @@ def extract_pcap_with_dpkt(pcap_file, output_json_file):
     # Save the extracted data in JSON format
     with open(output_json_file, 'w') as json_file:
         json_file.write(json_string)
+        
+    # Execution time
+    execution_time = time.time() - start_time
 
     print(f"File JSON creato: {output_json_file} (Dimensione: {size_in_bytes} bytes)")
+    print(f"Numero di pacchetti esaminati: {packet_count}")
+    print(f"Tempo di esecuzione: {execution_time:.2f} secondi")
 
 # Main execution block
 if __name__ == "__main__":
