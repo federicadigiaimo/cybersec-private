@@ -16,14 +16,19 @@ def convert_timestamp(timestamp_str):
         dt = dt.replace(tzinfo=timezone.utc)
         iso_timestamp = dt.isoformat()
         return iso_timestamp
+    
     except Exception as e:
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
         return None
 
-def print_dns(items,type):
-    for query_value in items:
-        mdns_output_name = query_value.get(type)
-    return mdns_output_name
+def print_dns(items,key):
+    results = []
+    for k, v in items:
+        if isinstance(v, dict):  # Verifica che il valore sia un dizionario
+            result = v.get(key)
+            if result:
+                results.append(result)
+    return results if results else None
 
 def print_record_version(items):
         return items.get("tls.record.version")
@@ -89,7 +94,8 @@ def json_to_udm(input_json):
                     "event_timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
                 },
                 "network": {
-                    "transport_protocol": "TCP" if tcp else ("UDP" if udp else None),
+                    **({"transport_protocol": "TCP" if tcp else "UDP"} if tcp or udp else {}),
+                    
                     **({"ip": {
                         "source": ip.get("ip.src") ,
                         "destination": ip.get("ip.dst"),
@@ -135,7 +141,7 @@ def json_to_udm(input_json):
                         "query": {
                             "name": print_dns(mdns["Queries"].items(), "dns.qry.name") if "Queries" in mdns else None,
                             "ttl": print_dns(mdns["Answers"].items(), "dns.resp.ttl") if "Answers" in mdns else None,
-                            "flags_response": print_dns(mdns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in mdns else None,
+                            # "flags_response": print_dns(mdns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in mdns else None,
                             "type": print_dns(mdns["Queries"].items(), "dns.qry.type") if "Queries" in mdns else None,
                         },
                     }} if mdns else {}),
