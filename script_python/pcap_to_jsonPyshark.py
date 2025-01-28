@@ -20,8 +20,8 @@ def extract_pcap_data(pcap_file, output_json_file):
     extracted_data = []  # List to store the data extracted from the packets 
 
 
-    # We iterate through all the packets in the PCAP file.  
-    # For each packet, we extract details from the various layers and add them to the 'extracted_data' list.
+    # We iterate through all the packets in the PCAP file  
+    # For each packet, we extract details from the various layers and add them to the 'extracted_data' list
     for packet in cap:
         packet_info = {
             "event": {
@@ -76,6 +76,8 @@ def extract_pcap_data(pcap_file, output_json_file):
 
     # Convert the extracted data into a JSON string
     json_string = json.dumps(extracted_data, indent=4, default=str)
+    
+    # Calculate the JSON size
     size_in_bytes = len(json_string.encode('utf-8'))
 
     # Check if the size exceeds the allowed limit
