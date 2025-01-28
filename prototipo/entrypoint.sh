@@ -61,6 +61,8 @@ echo "Starting tshark on interface $INTERFACE with args: $ROTATE $LIMITS"
 # Monitora nuovi file completati in scrittura
 inotifywait -m -e close_write --format "%w%f" "$INPUT_DIR" | while read -r NEW_FILE; do
   echo "File completato: $NEW_FILE"
+  # Piccolo ritardo per assicurarsi che il file sia completamente scritto
+  sleep 1
   process_file "$NEW_FILE"
 done
 
