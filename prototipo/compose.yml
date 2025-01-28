@@ -3,6 +3,9 @@ services:
   wireshark2chronicle:
     build: .
     network_mode: "host"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     volumes:
       - ./sniff:/app/input
       - ./processed:/app/trash
