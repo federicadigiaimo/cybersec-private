@@ -4,7 +4,6 @@ import os
 import logging
 from datetime import datetime, timezone
 
-
 MAX_FILE_SIZE_MB = 1
 
 # Configure logging
@@ -13,15 +12,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Convert timestamp to RFC 3339
 def convert_timestamp(timestamp_str):
     try:
-        timestamp_str = timestamp_str[:-9] + timestamp_str[-3:]
-        
-        if "UTC" in timestamp_str:
-            timestamp_str = timestamp_str.replace("UTC", " UTC")
-
-        dt = datetime.strptime(timestamp_str, "%b %d, %Y %H:%M:%S.%f %Z")
+        dt = datetime.strptime(timestamp_str[:25], "%b %d, %Y %H:%M:%S.%f")
         dt = dt.replace(tzinfo=timezone.utc)
         iso_timestamp = dt.isoformat()
-        iso_timestamp = iso_timestamp.split('.')[0] + "+00:00"
         return iso_timestamp
     except Exception as e:
         logging.error(f"Error converting timestamp '{timestamp_str}': {e}")
@@ -96,75 +89,84 @@ def json_to_udm(input_json):
                     "event_timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
                 },
                 "network": {
-                    #"application_protocol" ?
                     "transport_protocol": "TCP" if tcp else ("UDP" if udp else None),
-                    "ip": {
+                    **({"ip": {
                         "source": ip.get("ip.src") ,
                         "destination": ip.get("ip.dst"),
                         "ttl": ip.get("ip.ttl") if ip.get("ip.ttl") else None,
-                    },
-                    "ipv6": {
+                    }} if ip else {}),
+                    
+                    **({"ipv6": {
                         "source": ipv6.get("ipv6.src") ,
                         "destination": ipv6.get("ipv6.dst"),
-                    },
-                    "eth": {
+                    }} if ipv6 else {}),
+                    
+                    **({"eth": {
                         "source_mac": eth.get("eth.src"),
                         "destination_mac": eth.get("eth.dst"),
-                    },
-                    "udp": {
-                        "source_port": udp.get("udp.srcport") if udp else None,
-                        "destination_port": udp.get("udp.dstport") if udp else None,
-                    },
-                    "tcp": {
-                        "source_port": tcp.get("tcp.srcport") if tcp else None,
-                        "destination_port": tcp.get("tcp.dstport") if tcp else None,
+                    }} if eth else {}),
+                    
+                    **({"udp": {
+                        "source_port": udp.get("udp.srcport"),
+                        "destination_port": udp.get("udp.dstport"),
+                    }} if udp else {}),
+                    
+                    **({"tcp": {
+                        "source_port": tcp.get("tcp.srcport"),
+                        "destination_port": tcp.get("tcp.dstport"),
                         "flags": tcp.get("tcp.flags") if tcp.get("tcp.flags") else None,
-                    },
-                    "icmp": {
-                        "type": icmp.get("icmp.type") if icmp else None,
-                        "code": icmp.get("icmp.code") if icmp else None,
-                    },
-                    "dns": {
+                    }} if tcp else {}),
+                    
+                     **({"icmp": {
+                        "type": icmp.get("icmp.type"),
+                        "code": icmp.get("icmp.code"),
+                    }} if icmp else {}),
+                    
+                    **({"dns": {
                         "query": {
                             "name": print_dns(dns["Queries"].items(), "dns.qry.name") if "Queries" in dns else None,
                             "ttl": print_dns(dns["Answers"].items(), "dns.resp.ttl") if "Answers" in dns else None,
                             "flags_response": print_dns(dns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in dns else None,
                             "type": print_dns(dns["Queries"].items(), "dns.qry.type") if "Queries" in dns else None,
                         },
-                    },
-                    "mdns": {
+                    }} if dns else {}),
+                    
+                    **({"mdns": {
                         "query": {
                             "name": print_dns(mdns["Queries"].items(), "dns.qry.name") if "Queries" in mdns else None,
                             "ttl": print_dns(mdns["Answers"].items(), "dns.resp.ttl") if "Answers" in mdns else None,
                             "flags_response": print_dns(mdns["dns.flags_tree"].items(), "dns.flags.response") if "dns.flags_tree" in mdns else None,
                             "type": print_dns(mdns["Queries"].items(), "dns.qry.type") if "Queries" in mdns else None,
                         },
-                    },
-                    "http": {
-                        "host": http.get("http.host") if http else None,
-                        "file_data": http.get("http.file_data") if http else None,
+                    }} if mdns else {}),
+                    
+                    **({"http": {
+                        "host": http.get("http.host"),
+                        "file_data": http.get("http.file_data"),
                         # Sviluppi futuri
                         # "method": http.get("http.request.method") if http else None,
                         # "uri": http.get("http.request.uri") if http else None,
-                    },
-                    "tls": {
+                    }} if http else {}),
+                    
+                    **({"tls": {
                         "version":  print_record_version(tls["tls.record"]) if tls and "tls.record" in tls else None, 
                         "handshake": {
                             "version": print_handshake_version(tls["tls.record"]) if tls and "tls.record" in tls else None,
                         }
-                    },
-                    "arp": {
-                        "source_mac": arp.get("arp.src.hw_mac") if arp else None,
-                        "source_ipv4":  arp.get("arp.src.proto_ipv4") if arp else None,
-                        "destination_mac": arp.get("arp.dst.hw_mac") if arp else None,
-                        "destination_ipv4": arp.get("arp.dst.proto_ipv4") if arp else None,
-                    },
+                    }} if tls else {}),
                     
-                },
-                "frame": {
+                    **({"arp": {
+                        "source_mac": arp.get("arp.src.hw_mac"),
+                        "source_ipv4":  arp.get("arp.src.proto_ipv4"),
+                        "destination_mac": arp.get("arp.dst.hw_mac"),
+                        "destination_ipv4": arp.get("arp.dst.proto_ipv4"),
+                    }} if arp else {}),
+                    
+                    "frame": {
                     "timestamp": convert_timestamp(frame.get("frame.time_utc")) if frame.get("frame.time_utc") else None,
                     "length": frame.get("frame.len") if frame.get("frame.len") else None,
                     "protocols": frame.get("frame.protocols"),
+                    }
                 }
             }
             udm_events.append(event)
