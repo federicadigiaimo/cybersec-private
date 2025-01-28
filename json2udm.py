@@ -24,7 +24,7 @@ def convert_timestamp(timestamp_str):
 def print_dns(items,key):
     results = []
     for k, v in items:
-        if isinstance(v, dict):  # Verifica che il valore sia un dizionario
+        if isinstance(v, dict):
             result = v.get(key)
             if result is not None:
                 results.append(result)

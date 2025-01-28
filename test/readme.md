@@ -25,9 +25,13 @@ capture3.json       tshark -i wlo1 -c 25 -e ip.src -e ip.dst -e tcp.srcport -e t
 
 ## quarto test
 
+capture_arp.json
+
 capture_dns.json
 
 capture_http.json
+
+capture_http2.json
 
 capture_icmp.json
 
