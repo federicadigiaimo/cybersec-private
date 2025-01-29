@@ -60,8 +60,10 @@ for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
   fi
 done
 
-# Recover and process pending files before starting sniffing
-recover_pending_files
+# Check for pending files before executing recovery function
+if ls "$INPUT_DIR"/*.pcap "$MID_DIR"/*.json 2> /dev/null | grep -q .; then
+    recover_pending_files
+fi
 
 # Handle error in case of premature tshark termination
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
