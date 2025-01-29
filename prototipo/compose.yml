@@ -11,5 +11,5 @@ services:
       - ./processed:/app/trash
       - ./chronicle:/app/output
     environment:
-      - ROTATE="-b filesize:1024"
-      - LIMITS="-c 20000"
+      - ROTATE=-b filesize:1024
+      - LIMITS=-c 20000
