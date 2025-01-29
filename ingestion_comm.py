@@ -13,7 +13,7 @@ def load_config(filename):
                 key, value = line.split('=', 1)
                 config[key.strip()] = value.strip()
     return config
-config = load_config('config.conf')
+config = load_config('chronicle-api.conf')
 
 # Load costumer id and credentials
 customer_id = config['CUSTOMER_ID']
