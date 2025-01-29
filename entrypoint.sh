@@ -43,12 +43,12 @@ process_file() {
 recover_pending_files() {
     echo "Recovering pending files before starting new sniffing session..."
     # Step 1: Process all pcap files in INPUT_DIR
-    for FILE in "$INPUT_DIR"/*.pcap; do
-        [ -e "$FILE" ] && process_file "$FILE"
+    for PENDING in "$INPUT_DIR"/*.pcap; do
+        [ -e "$PENDING" ] && tshark -r "$PENDING" -T json > "$MID_DIR/$(basename "$PENDING" .pcap).json" && mv "$PENDING" "$TRASH_DIR/"
     done
     # Step 2: Process all json files in MID_DIR
-    for FILE in "$MID_DIR"/*.json; do
-        [ -e "$FILE" ] && python3 /app/json2udm.py "$FILE" "$OUTPUT_DIR/$(basename "$FILE")" && rm "$FILE"
+    for PENDING in "$MID_DIR"/*.json; do
+        [ -e "$PENDING" ] && python3 /app/json2udm.py "$PENDING" "$OUTPUT_DIR/$(basename "$PENDING")" && rm "$PENDING"
     done
 }
 
