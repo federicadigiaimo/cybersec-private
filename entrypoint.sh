@@ -47,6 +47,15 @@ for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
   fi
 done
 
+# Process any existing files before starting sniffing
+echo "Checking for existing files to process before starting sniffing..."
+for FILE in "$INPUT_DIR"/*.pcap; do
+    [ -e "$FILE" ] && process_file "$FILE"
+done
+for FILE in "$MID_DIR"/*.json; do
+    [ -e "$FILE" ] && python3 /app/json2udm.py "$FILE" "$OUTPUT_DIR/$(basename "$FILE")" && rm "$FILE"
+done
+
 # Handle error in case of premature tshark termination
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
 
