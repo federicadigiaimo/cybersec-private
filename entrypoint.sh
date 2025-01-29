@@ -1,36 +1,36 @@
 #!/bin/bash
 
-# Script eseguito all'avvio del container, gestisce sia lo sniffing che il suo post-processing
+# Script executed at container startup, handles both sniffing and post-processing
 
-# Interfaccia di rete (eth0 dovrebbe andare bene, standard per il container)
+# Network interface (eth0 should be fine, standard for the container)
 INTERFACE="-i eth0"
 
-# Possibili limiti (per test), abbastanza per mostrare la func "write_to_multiple_files()"
+# Possible limits (for testing), enough to show the "write_to_multiple_files()" function
 LIMITS="${LIMITS:-"-c 20000"}"
 
-# Regole di rotazione predefinite
+# Default rotation rules
 ROTATE="${ROTATE:-"-b filesize:10240"}"
 
-# Percorsi e volumi
-INPUT_DIR="/app/input"      # qui vengono messe le catture
-TRASH_DIR="/app/trash"      # una volta tradotti in json, i pcap vanno qui
-MID_DIR="/app/jsonized"     # i json pronti per parsing UDM
-OUTPUT_DIR="/app/output"    # file pronti per chronicle
+# Paths and volumes
+INPUT_DIR="/app/input"      # captures are placed here
+TRASH_DIR="/app/trash"      # once translated to JSON, pcaps go here
+MID_DIR="/app/jsonized"     # JSONs ready for UDM parsing
+OUTPUT_DIR="/app/output"    # files ready for chronicle
 
-# Funzione per processare un file
+# Function to process a file
 process_file() {
-    # Ottengo il percorso relativo del file e ci aggiungo l'estensione .json
+    # Get the relative path of the file and add the .json extension
     local FILE="$(basename "$1" .pcap).json"
 
-    # Fase 1: pcap -> json (sposto il file in trash se andato a buon fine)
+    # Step 1: pcap -> json (move the file to trash if successful)
     if tshark -r "$1" -T json > "$MID_DIR/$FILE"; then
         mv "$1" "$TRASH_DIR/"
     else
-        echo "Errore nella conversione del file $1"
+        echo "Error converting file $1"
         return 1
     fi
-  
-    # Fase 2: json -> UDM (sposto il file in output se andato a buon fine)
+
+    # Step 2: json -> UDM (move the file to output if successful)
     if python3 /app/json2udm.py "$MID_DIR/$FILE" "$OUTPUT_DIR/$FILE"; then
         echo "Processing successful, removing file: $MID_DIR/$FILE"
         rm "$MID_DIR/$FILE"
@@ -39,32 +39,32 @@ process_file() {
     fi
 }
 
-# Verifica che le directory esistano
+# Check if directories exist
 for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
   if [ ! -d "$DIR" ]; then
-    echo "Directory $DIR non trovata. Creazione..."
+    echo "Directory $DIR not found. Creating..."
     mkdir -p "$DIR"
   fi
 done
 
-# Gestione dell'errore nel caso di terminazione prematura di tshark
+# Handle error in case of premature tshark termination
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
 
-# Avvia tshark in background
+# Start tshark in the background
 echo "Starting tshark..."
 tshark $INTERFACE $ROTATE $LIMITS -w $INPUT_DIR/capture.pcap &
 TSHARK_PID=$!
 
-# Log conferma
+# Log confirmation
 echo "Starting tshark on interface $INTERFACE with args: $ROTATE $LIMITS"
 
-# Monitora nuovi file completati in scrittura
+# Monitor new files completed for writing
 inotifywait -m -e close_write --format "%w%f" "$INPUT_DIR" | while read -r NEW_FILE; do
-  echo "File completato: $NEW_FILE"
-  # Piccolo ritardo per assicurarsi che il file sia completamente scritto
+  echo "File completed: $NEW_FILE"
+  # Small delay to ensure file is fully written
   sleep 1
   process_file "$NEW_FILE"
 done
 
-# Gestisce la terminazione di tshark (se necessario)
+# Handles tshark termination (if necessary)
 wait $TSHARK_PID
