@@ -39,6 +39,19 @@ process_file() {
     fi
 }
 
+# Function to recover and process pending files
+recover_pending_files() {
+    echo "Recovering pending files before starting new sniffing session..."
+    # Step 1: Process all pcap files in INPUT_DIR
+    for FILE in "$INPUT_DIR"/*.pcap; do
+        [ -e "$FILE" ] && process_file "$FILE"
+    done
+    # Step 2: Process all json files in MID_DIR
+    for FILE in "$MID_DIR"/*.json; do
+        [ -e "$FILE" ] && python3 /app/json2udm.py "$FILE" "$OUTPUT_DIR/$(basename "$FILE")" && rm "$FILE"
+    done
+}
+
 # Check if directories exist
 for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
   if [ ! -d "$DIR" ]; then
@@ -47,14 +60,8 @@ for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
   fi
 done
 
-# Process any existing files before starting sniffing
-echo "Checking for existing files to process before starting sniffing..."
-for FILE in "$INPUT_DIR"/*.pcap; do
-    [ -e "$FILE" ] && process_file "$FILE"
-done
-for FILE in "$MID_DIR"/*.json; do
-    [ -e "$FILE" ] && python3 /app/json2udm.py "$FILE" "$OUTPUT_DIR/$(basename "$FILE")" && rm "$FILE"
-done
+# Recover and process pending files before starting sniffing
+recover_pending_files
 
 # Handle error in case of premature tshark termination
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
