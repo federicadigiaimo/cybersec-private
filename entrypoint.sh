@@ -60,7 +60,7 @@ for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
   fi
 done
 
-# Check for pending files before executing recovery function
+# Check for remaining files from a previous execution that still need to be processed.
 if ls "$INPUT_DIR"/*.pcap "$MID_DIR"/*.json 2> /dev/null | grep -q .; then
     recover_pending_files
 fi
