@@ -30,7 +30,7 @@ process_file() {
         return 1
     fi
 
-    # Step 2: json -> UDM (move the file to output if successful)
+    # Step 2: json -> UDM (remove input file if successful)
     if python3 /app/json2udm.py "$MID_DIR/$FILE" "$OUTPUT_DIR/$FILE"; then
         echo "Processing successful, removing file: $MID_DIR/$FILE"
         rm "$MID_DIR/$FILE"
