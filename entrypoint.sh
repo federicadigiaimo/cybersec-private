@@ -56,12 +56,12 @@ recover_pending_files() {
     # Step 2: Process all json files in MID_DIR
     for PENDING in "$MID_DIR"/*.json; do
         [ -e "$PENDING" ] && python3 /app/json2udm.py "$PENDING" "$OUTPUT_DIR/$(basename "$PENDING")" && rm "$PENDING"
-    done
 
-    # Step 3 (optional): sending results to Google Chronicle
-#    if python3 ingestion_comm.py "$OUTPUT_DIR/$(basename "$PENDING")"; then
-#        echo "Results successfully sent to Google Chronicle"
-#    fi
+        # Step 3 (optional): sending results to Google Chronicle
+#        if python3 ingestion_comm.py "$OUTPUT_DIR/$(basename "$PENDING")"; then
+#            echo "Results successfully sent to Google Chronicle"
+#        fi
+    done
 }
 
 # Check if directories exist
