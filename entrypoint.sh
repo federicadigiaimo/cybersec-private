@@ -37,19 +37,31 @@ process_file() {
     else
         echo "Error processing file: $MID_DIR/$FILE. Keeping the original file."
     fi
+
+    # Step 3 (optional): sending results to Google Chronicle
+#    if python3 ingestion_comm.py "$OUTPUT_DIR/$FILE"; then
+#        echo "Results successfully sent to Google Chronicle"
+#    fi
 }
 
 # Function to recover and process pending files
 recover_pending_files() {
     echo "Recovering pending files before starting new sniffing session..."
+    
     # Step 1: Process all pcap files in INPUT_DIR
     for PENDING in "$INPUT_DIR"/*.pcap; do
         [ -e "$PENDING" ] && tshark -r "$PENDING" -T json > "$MID_DIR/$(basename "$PENDING" .pcap).json" && mv "$PENDING" "$TRASH_DIR/"
     done
+    
     # Step 2: Process all json files in MID_DIR
     for PENDING in "$MID_DIR"/*.json; do
         [ -e "$PENDING" ] && python3 /app/json2udm.py "$PENDING" "$OUTPUT_DIR/$(basename "$PENDING")" && rm "$PENDING"
     done
+
+    # Step 3 (optional): sending results to Google Chronicle
+#    if python3 ingestion_comm.py "$OUTPUT_DIR/$FILE"; then
+#        echo "Results successfully sent to Google Chronicle"
+#    fi
 }
 
 # Check if directories exist
