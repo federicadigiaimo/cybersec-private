@@ -30,13 +30,38 @@ process_file() {
         return 1
     fi
 
-    # Step 2: json -> UDM (move the file to output if successful)
+    # Step 2: json -> UDM (remove input file if successful)
     if python3 /app/json2udm.py "$MID_DIR/$FILE" "$OUTPUT_DIR/$FILE"; then
         echo "Processing successful, removing file: $MID_DIR/$FILE"
         rm "$MID_DIR/$FILE"
     else
         echo "Error processing file: $MID_DIR/$FILE. Keeping the original file."
     fi
+
+    # Step 3 (optional): sending results to Google Chronicle
+#    if python3 /app/ingestion_comm.py "$OUTPUT_DIR/$FILE"; then
+#        echo "Results successfully sent to Google Chronicle"
+#    fi
+}
+
+# Function to recover and process pending files
+recover_pending_files() {
+    echo "Recovering pending files before starting new sniffing session..."
+    
+    # Step 1: Process all pcap files in INPUT_DIR
+    for PENDING in "$INPUT_DIR"/*.pcap; do
+        [ -e "$PENDING" ] && tshark -r "$PENDING" -T json > "$MID_DIR/$(basename "$PENDING" .pcap).json" && mv "$PENDING" "$TRASH_DIR/"
+    done
+    
+    # Step 2: Process all json files in MID_DIR
+    for PENDING in "$MID_DIR"/*.json; do
+        if [ -e "$PENDING" ]; then
+            python3 /app/json2udm.py "$PENDING" "$OUTPUT_DIR/$(basename "$PENDING")" && rm "$PENDING"
+            
+            # Step 3 (optional): sending results to Google Chronicle
+#            python3 /app/ingestion_comm.py "$OUTPUT_DIR/$(basename "$PENDING")" && echo "Results successfully sent to Google Chronicle"
+        fi
+    done
 }
 
 # Check if directories exist
@@ -46,6 +71,11 @@ for DIR in "$INPUT_DIR" "$TRASH_DIR" "$MID_DIR" "$OUTPUT_DIR"; do
     mkdir -p "$DIR"
   fi
 done
+
+# Check for remaining files from a previous execution that still need to be processed.
+if ls "$INPUT_DIR"/*.pcap "$MID_DIR"/*.json 2> /dev/null | grep -q .; then
+    recover_pending_files
+fi
 
 # Handle error in case of premature tshark termination
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
