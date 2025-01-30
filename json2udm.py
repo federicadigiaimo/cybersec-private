@@ -33,22 +33,6 @@ def print_dns(items,key):
 def print_record_version(items):
     return items.get("tls.record.version")
 
-def get_all_ciphersuites(tls):
-    ciphersuites = []
-
-    if "tls.handshake" in tls:
-        ciphersuites_data = tls["tls.handshake"].get("tls.handshake.ciphersuites", {})
-
-        # Controlla se ciphersuites_data è un dizionario
-        if isinstance(ciphersuites_data, dict):
-            # Prova a ottenere tutti i valori dei ciphersuites
-            for key in ciphersuites_data.keys():
-                print(ciphersuites_data[key])
-                ciphersuites.append(ciphersuites_data[key])  # Aggiunge l'ultimo valore per ciascuna chiave
-
-    return ciphersuites
-
-
 def print_handshake(items, item):
     if "tls.handshake" in items:
         value = items["tls.handshake"].get(item)
@@ -159,15 +143,12 @@ def json_to_udm(input_json):
                     }} if http else {}),
                     
                     "tls": {
-                        **({"record_version": print_record_version(tls["tls.record"])}
-                            if "tls.record" in tls and print_record_version(tls["tls.record"]) is not None else {}),
+                        **({"record_version": tls["tls.record"].get("tls.record.version")}
+                            if "tls.record" in tls and tls["tls.record"].get("tls.record.version") is not None else {}),
     
                         **({"handshake": {
                             **({"version": print_handshake(tls["tls.record"], "tls.handshake.version")}
                                 if "tls.record" in tls and print_handshake(tls["tls.record"], "tls.handshake.version") is not None else {}),
-    
-                            **({"ciphersuites": get_all_ciphersuites(tls["tls.record"])}
-                                if tls else {}),
                         }} if "tls.handshake" in tls["tls.record"] else {}),
                     } if tls else {},
                     
