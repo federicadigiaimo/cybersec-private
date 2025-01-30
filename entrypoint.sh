@@ -59,7 +59,7 @@ recover_pending_files() {
     done
 
     # Step 3 (optional): sending results to Google Chronicle
-#    if python3 ingestion_comm.py "$OUTPUT_DIR/$FILE"; then
+#    if python3 ingestion_comm.py "$OUTPUT_DIR/$(basename "$PENDING")"; then
 #        echo "Results successfully sent to Google Chronicle"
 #    fi
 }
