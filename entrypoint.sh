@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Script executed at container startup, handles both sniffing and post-processing
 
 # Network interface (eth0 should be fine, standard for the container)
@@ -38,7 +39,7 @@ process_file() {
     fi
 
     # Step 3 (optional): sending results to Google Chronicle
-#    if python3 ingestion_comm.py "$OUTPUT_DIR/$FILE"; then
+#    if python3 /app/ingestion_comm.py "$OUTPUT_DIR/$FILE"; then
 #        echo "Results successfully sent to Google Chronicle"
 #    fi
 }
@@ -58,9 +59,8 @@ recover_pending_files() {
             python3 /app/json2udm.py "$PENDING" "$OUTPUT_DIR/$(basename "$PENDING")" && rm "$PENDING"
             
             # Step 3 (optional): sending results to Google Chronicle
-#            if python3 ingestion_comm.py "$OUTPUT_DIR/$(basename "$PENDING")"; then
-#                echo "Results successfully sent to Google Chronicle"
-#            fi
+#            python3 /app/ingestion_comm.py "$OUTPUT_DIR/$(basename "$PENDING")" && echo "Results successfully sent to Google Chronicle"
+        fi
     done
 }
 
