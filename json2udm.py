@@ -31,12 +31,13 @@ def print_dns(items,key):
     return results if results else None
 
 def print_record_version(items):
-        return items.get("tls.record.version")
+    return items.get("tls.record.version")
 
-def print_handshake_version(items):
+def print_handshake(items, item):
     if "tls.handshake" in items:
-        return items["tls.handshake"].get("tls.handshake.version")
-    else : return None
+        value = items["tls.handshake"].get(item)
+        return value
+    return None
 
 # Function to convert JSON to UDM format
 def json_to_udm(input_json):
@@ -141,12 +142,15 @@ def json_to_udm(input_json):
 #                        **({"uri": http.get("http.request.uri")} if http.get("http.request.uri") else {}),
                     }} if http else {}),
                     
-                    **({"tls": {
-                        **({"version":  print_record_version(tls["tls.record"])} if tls and "tls.record" in tls else {}), 
+                    "tls": {
+                        **({"record_version": tls["tls.record"].get("tls.record.version")}
+                            if "tls.record" in tls and tls["tls.record"].get("tls.record.version") is not None else {}),
+    
                         **({"handshake": {
-                            "version": print_handshake_version(tls["tls.record"])
-                        }} if "tls.record" in tls and print_handshake_version(tls["tls.record"]) is not None else {}),
-                    }} if tls else {}),
+                            **({"version": print_handshake(tls["tls.record"], "tls.handshake.version")}
+                                if "tls.record" in tls and print_handshake(tls["tls.record"], "tls.handshake.version") is not None else {}),
+                        }} if "tls.handshake" in tls["tls.record"] else {}),
+                    } if tls else {},
                     
                     **({"arp": {
                          **({"source_mac": arp.get("arp.src.hw_mac")} 
@@ -176,13 +180,13 @@ def json_to_udm(input_json):
     return udm_events
 
 # Function to write events to multiple files if size exceeds 1 MB
-def write_to_multiple_files(events, base_output_file):
+def write_to_multiple_files(udm_events, base_output_file):
     max_size_bytes = MAX_FILE_SIZE_MB * 1024 * 1024  # Convert MB to bytes
     current_file_index = 1
     current_events = []
     current_size = 0
 
-    for event in events:
+    for event in udm_events:
         try:
             # Serialize the event and calculate its size
             event_json = json.dumps(event, indent=4)
