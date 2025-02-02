@@ -7,8 +7,8 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY json2udm.py /app/json2udm.py
-#COPY ingestion_comm.py /app/ingestion_comm.py
-#COPY chronicle-api.conf /app/chronicle-api.conf
+#COPY send_to_chronicle/ingestion_comm.py /app/ingestion_comm.py
+#COPY send_to_chronicle/chronicle-api.conf /app/chronicle-api.conf
 COPY entrypoint.sh /app/entrypoint.sh
 
 RUN chmod +x /app/entrypoint.sh
