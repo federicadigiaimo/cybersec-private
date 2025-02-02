@@ -30,9 +30,6 @@ def print_dns(items,key):
                 results.append(result)
     return results if results else None
 
-def print_record_version(items):
-    return items.get("tls.record.version")
-
 def print_handshake(items, item):
     if "tls.handshake" in items:
         value = items["tls.handshake"].get(item)
@@ -66,7 +63,6 @@ def json_to_udm(input_json):
             http = layers.get("http", {})
             tls = layers.get("tls", {})
             arp = layers.get("arp",{})
-#           data = layers.get("data",{}) da approfondire data.len e frame.len
 
             event = {
                 "event": {
@@ -138,8 +134,6 @@ def json_to_udm(input_json):
                     **({"http": {
                         **({"host": http.get("http.host")} if http.get("http.host") else {}),
                         **({"file_data": http.get("http.file_data")} if http.get("file_data") else {}),
-#                        **({"method": http.get("http.request.method")} if http.get("http.request.method") else {}),
-#                        **({"uri": http.get("http.request.uri")} if http.get("http.request.uri") else {}),
                     }} if http else {}),
                     
                     "tls": {
