@@ -1,0 +1,1730 @@
+[
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:54.433411447 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:54.433411447 UTC",
+          "frame.time_epoch": "1737975954.433411447",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.067342652",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "0.169878646",
+          "frame.number": "4",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x3b04",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xe374",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x28e1",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "5",
+          "icmp.seq_le": "1280",
+          "icmp.data_time": "Jan 27, 2025 12:05:54.433355000 CET",
+          "icmp.data_time_relative": "0.000056447",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:54.448413258 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:54.448413258 UTC",
+          "frame.time_epoch": "1737975954.448413258",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.015001811",
+          "frame.time_delta_displayed": "0.015001811",
+          "frame.time_relative": "0.184880457",
+          "frame.number": "5",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x30e1",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "5",
+          "icmp.seq_le": "1280",
+          "icmp.resp_to": "4",
+          "icmp.resptime": "15.001811",
+          "icmp.data_time": "Jan 27, 2025 12:05:54.433355000 CET",
+          "icmp.data_time_relative": "0.015058258",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:55.435127581 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:55.435127581 UTC",
+          "frame.time_epoch": "1737975955.435127581",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.147393852",
+          "frame.time_delta_displayed": "0.986714323",
+          "frame.time_relative": "1.171594780",
+          "frame.number": "14",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x3e54",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xe024",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x69d9",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "6",
+          "icmp.seq_le": "1536",
+          "icmp.data_time": "Jan 27, 2025 12:05:55.435081000 CET",
+          "icmp.data_time_relative": "0.000046581",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:55.443945193 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:55.443945193 UTC",
+          "frame.time_epoch": "1737975955.443945193",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.008817612",
+          "frame.time_delta_displayed": "0.008817612",
+          "frame.time_relative": "1.180412392",
+          "frame.number": "15",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x71d9",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "6",
+          "icmp.seq_le": "1536",
+          "icmp.resp_to": "14",
+          "icmp.resptime": "8.817612",
+          "icmp.data_time": "Jan 27, 2025 12:05:55.435081000 CET",
+          "icmp.data_time_relative": "0.008864193",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:56.436683642 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:56.436683642 UTC",
+          "frame.time_epoch": "1737975956.436683642",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.124858529",
+          "frame.time_delta_displayed": "0.992738449",
+          "frame.time_relative": "2.173150841",
+          "frame.number": "21",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x4000",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xde78",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x53d2",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "7",
+          "icmp.seq_le": "1792",
+          "icmp.data_time": "Jan 27, 2025 12:05:56.436638000 CET",
+          "icmp.data_time_relative": "0.000045642",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:56.450367535 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:56.450367535 UTC",
+          "frame.time_epoch": "1737975956.450367535",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.013683893",
+          "frame.time_delta_displayed": "0.013683893",
+          "frame.time_relative": "2.186834734",
+          "frame.number": "22",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x5bd2",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "7",
+          "icmp.seq_le": "1792",
+          "icmp.resp_to": "21",
+          "icmp.resptime": "13.683893",
+          "icmp.data_time": "Jan 27, 2025 12:05:56.436638000 CET",
+          "icmp.data_time_relative": "0.013729535",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:57.438755487 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:57.438755487 UTC",
+          "frame.time_epoch": "1737975957.438755487",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.102846669",
+          "frame.time_delta_displayed": "0.988387952",
+          "frame.time_relative": "3.175222686",
+          "frame.number": "30",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x40eb",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xdd8d",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x3bc9",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "8",
+          "icmp.seq_le": "2048",
+          "icmp.data_time": "Jan 27, 2025 12:05:57.438709000 CET",
+          "icmp.data_time_relative": "0.000046487",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:57.449808198 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:57.449808198 UTC",
+          "frame.time_epoch": "1737975957.449808198",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.011052711",
+          "frame.time_delta_displayed": "0.011052711",
+          "frame.time_relative": "3.186275397",
+          "frame.number": "31",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x43c9",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "8",
+          "icmp.seq_le": "2048",
+          "icmp.resp_to": "30",
+          "icmp.resptime": "11.052711",
+          "icmp.data_time": "Jan 27, 2025 12:05:57.438709000 CET",
+          "icmp.data_time_relative": "0.011099198",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:58.440519556 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:58.440519556 UTC",
+          "frame.time_epoch": "1737975958.440519556",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.080528347",
+          "frame.time_delta_displayed": "0.990711358",
+          "frame.time_relative": "4.176986755",
+          "frame.number": "36",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x4170",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xdd08",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x4fc1",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "9",
+          "icmp.seq_le": "2304",
+          "icmp.data_time": "Jan 27, 2025 12:05:58.440480000 CET",
+          "icmp.data_time_relative": "0.000039556",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:58.451978189 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:58.451978189 UTC",
+          "frame.time_epoch": "1737975958.451978189",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.011458633",
+          "frame.time_delta_displayed": "0.011458633",
+          "frame.time_relative": "4.188445388",
+          "frame.number": "37",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x57c1",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "9",
+          "icmp.seq_le": "2304",
+          "icmp.resp_to": "36",
+          "icmp.resptime": "11.458633",
+          "icmp.data_time": "Jan 27, 2025 12:05:58.440480000 CET",
+          "icmp.data_time_relative": "0.011498189",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:59.442683954 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:59.442683954 UTC",
+          "frame.time_epoch": "1737975959.442683954",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.160989726",
+          "frame.time_delta_displayed": "0.990705765",
+          "frame.time_relative": "5.179151153",
+          "frame.number": "42",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x421a",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xdc5e",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0xe1b7",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "10",
+          "icmp.seq_le": "2560",
+          "icmp.data_time": "Jan 27, 2025 12:05:59.442637000 CET",
+          "icmp.data_time_relative": "0.000046954",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:05:59.452689297 CET",
+          "frame.time_utc": "Jan 27, 2025 11:05:59.452689297 UTC",
+          "frame.time_epoch": "1737975959.452689297",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.010005343",
+          "frame.time_delta_displayed": "0.010005343",
+          "frame.time_relative": "5.189156496",
+          "frame.number": "43",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0xe9b7",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "10",
+          "icmp.seq_le": "2560",
+          "icmp.resp_to": "42",
+          "icmp.resptime": "10.005343",
+          "icmp.data_time": "Jan 27, 2025 12:05:59.442637000 CET",
+          "icmp.data_time_relative": "0.010052297",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:06:00.444264957 CET",
+          "frame.time_utc": "Jan 27, 2025 11:06:00.444264957 UTC",
+          "frame.time_epoch": "1737975960.444264957",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.138451521",
+          "frame.time_delta_displayed": "0.991575660",
+          "frame.time_relative": "6.180732156",
+          "frame.number": "49",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x4344",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xdb34",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0xa6b0",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "11",
+          "icmp.seq_le": "2816",
+          "icmp.data_time": "Jan 27, 2025 12:06:00.444231000 CET",
+          "icmp.data_time_relative": "0.000033957",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:06:00.459336769 CET",
+          "frame.time_utc": "Jan 27, 2025 11:06:00.459336769 UTC",
+          "frame.time_epoch": "1737975960.459336769",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.015071812",
+          "frame.time_delta_displayed": "0.015071812",
+          "frame.time_relative": "6.195803968",
+          "frame.number": "50",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0xaeb0",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "11",
+          "icmp.seq_le": "2816",
+          "icmp.resp_to": "49",
+          "icmp.resptime": "15.071812",
+          "icmp.data_time": "Jan 27, 2025 12:06:00.444231000 CET",
+          "icmp.data_time_relative": "0.015105769",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:06:01.445971277 CET",
+          "frame.time_utc": "Jan 27, 2025 11:06:01.445971277 UTC",
+          "frame.time_epoch": "1737975961.445971277",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.115803329",
+          "frame.time_delta_displayed": "0.986634508",
+          "frame.time_relative": "7.182438476",
+          "frame.number": "58",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "3c:37:12:40:fc:a2",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.dst.oui": "3946258",
+            "eth.dst.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "80:91:33:31:60:93",
+          "eth.src_tree": {
+            "eth.src_resolved": "AzureWaveTec_31:60:93",
+            "eth.src.oui": "8425779",
+            "eth.src.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x46ea",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0xd78e",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.src_host": "192.168.178.30",
+          "ip.host": "192.168.178.30",
+          "ip.dst": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.dst_host": "216.58.209.46",
+          "ip.host": "216.58.209.46"
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0xeda8",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "12",
+          "icmp.seq_le": "3072",
+          "icmp.data_time": "Jan 27, 2025 12:06:01.445951000 CET",
+          "icmp.data_time_relative": "0.000020277",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-01-27",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "wlo1"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Jan 27, 2025 12:06:01.458726227 CET",
+          "frame.time_utc": "Jan 27, 2025 11:06:01.458726227 UTC",
+          "frame.time_epoch": "1737975961.458726227",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.012754950",
+          "frame.time_delta_displayed": "0.012754950",
+          "frame.time_relative": "7.195193426",
+          "frame.number": "59",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data"
+        },
+        "eth": {
+          "eth.dst": "80:91:33:31:60:93",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "AzureWaveTec_31:60:93",
+            "eth.dst.oui": "8425779",
+            "eth.dst.oui_resolved": "AzureWave Technology Inc.",
+            "eth.addr": "80:91:33:31:60:93",
+            "eth.addr_resolved": "AzureWaveTec_31:60:93",
+            "eth.addr.oui": "8425779",
+            "eth.addr.oui_resolved": "AzureWave Technology Inc.",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "3c:37:12:40:fc:a2",
+          "eth.src_tree": {
+            "eth.src_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.src.oui": "3946258",
+            "eth.src.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.addr": "3c:37:12:40:fc:a2",
+            "eth.addr_resolved": "AVMAudiovisu_40:fc:a2",
+            "eth.addr.oui": "3946258",
+            "eth.addr.oui_resolved": "AVM Audiovisuelles Marketing und Computersysteme GmbH",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "116",
+          "ip.proto": "1",
+          "ip.checksum": "0x2a79",
+          "ip.checksum.status": "2",
+          "ip.src": "216.58.209.46",
+          "ip.addr": "216.58.209.46",
+          "ip.src_host": "216.58.209.46",
+          "ip.host": "216.58.209.46",
+          "ip.dst": "192.168.178.30",
+          "ip.addr": "192.168.178.30",
+          "ip.dst_host": "192.168.178.30",
+          "ip.host": "192.168.178.30"
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0xf5a8",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "5338",
+          "icmp.ident_le": "55828",
+          "icmp.seq": "12",
+          "icmp.seq_le": "3072",
+          "icmp.resp_to": "58",
+          "icmp.resptime": "12.75495",
+          "icmp.data_time": "Jan 27, 2025 12:06:01.445951000 CET",
+          "icmp.data_time_relative": "0.012775227",
+          "data": {
+            "data.data": "10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "40"
+          }
+        }
+      }
+    }
+  }
+]
