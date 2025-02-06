@@ -189,7 +189,7 @@ def write_to_multiple_files(udm_events, base_output_file):
             event_size = len(event_json.encode("utf-8"))  # Size in bytes
 
             # Check if adding this event exceeds the size limit
-            if current_size + event_size > max_size_bytes:
+            if current_size + event_size >= max_size_bytes:
                 # Write the current file
                 output_file = f"{base_output_file}_{current_file_index}.json"
                 with open(output_file, "w") as f:
