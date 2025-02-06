@@ -45,6 +45,7 @@ def json_to_udm(input_json):
         return []
 
     udm_events = []
+    total_events = 0
 
     for packet in packets:
         try:
@@ -165,12 +166,13 @@ def json_to_udm(input_json):
                 }
             }
             udm_events.append(event)
+            total_events += 1
         
         except KeyError as e:
             logging.warning(f"Skipping packet due to missing key: {e}")
         except Exception as e:
             logging.error(f"Unexpected error processing packet: {e}")
-
+    logging.info(f"Saved {total_events} events.")
     return udm_events
 
 # Function to write events to multiple files if size exceeds 1 MB
@@ -192,7 +194,7 @@ def write_to_multiple_files(udm_events, base_output_file):
                 output_file = f"{base_output_file}_{current_file_index}.json"
                 with open(output_file, "w") as f:
                     json.dump(current_events, f, indent=4)
-                logging.info(f"Saved {len(current_events)} events to {output_file}.")
+                #logging.info(f"Saved {len(current_events)} events to {output_file}")
                 # Start a new file
                 current_file_index += 1
                 current_events = []
@@ -215,9 +217,11 @@ def write_to_multiple_files(udm_events, base_output_file):
             output_file = f"{base_output_file}_{current_file_index}.json"
             with open(output_file, "w") as f:
                 json.dump(current_events, f, indent=4)
-            logging.info(f"Saved {len(current_events)} events to {output_file}.")
+            # logging.info(f"Saved {len(current_events)} events to {output_file}")
         except IOError as e:
             logging.error(f"Error writing the final file: {e}")
+    
+    logging.info(f"Creati {current_file_index} file.")
 
 # Main entry point
 if __name__ == "__main__":
