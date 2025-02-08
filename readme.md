@@ -6,9 +6,11 @@ Projects of the Cybersecurity course 2024/25, University of Bologna
 Questo progetto automatizza il processo di acquisizione dei pacchetti di rete tramite Wireshark (`tshark`), la loro conversione in formato JSON, e l'ulteriore trasformazione in un formato compatibile con Chronicle per l'analisi dei dati. Utilizza Docker per creare un ambiente isolato e gestire tutte le operazioni in modo efficiente.
 
 ## Authors
-<img src="https://github.com/federicadigiaimo.png" width="50" height="50"> [Federica Di Giaimo](https://github.com/federicadigiaimo)
-<img src="https://github.com/fillol.png" width="50" height="50"> [Filippo Lucchesi](https://github.com/fillol) 
-<img src="https://github.com/Mariman1234.png" width="50" height="50"> [Mariano Mancini](https://github.com/Mariman1234) 
+<img src="https://github.com/federicadigiaimo.png" width="40" height="40"> [Federica Di Giaimo](https://github.com/federicadigiaimo)
+
+<img src="https://github.com/fillol.png" width="40" height="40"> [Filippo Lucchesi](https://github.com/fillol) 
+
+<img src="https://github.com/Mariman1234.png" width="40" height="40"> [Mariano Mancini](https://github.com/Mariman1234) 
 
 ## Struttura del progetto
 
