@@ -47,7 +47,7 @@ docker-compose build
 Una volta che l'immagine è stata costruita, avvia il contenitore con il comando:
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 Questo avvierà `tshark`, che inizierà a catturare il traffico di rete. I file pcap verranno automaticamente processati e trasformati in JSON.
