@@ -95,6 +95,9 @@ while true; do
             break 2
         fi
     done
+
+    echo "No active interface found. Retrying in 5 seconds..."
+    sleep 5
 done
 
 # Handle error in case of premature tshark termination
