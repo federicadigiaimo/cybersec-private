@@ -47,7 +47,7 @@ docker-compose build
 Una volta che l'immagine è stata costruita, avvia il contenitore con il comando:
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 Questo avvierà `tshark`, che inizierà a catturare il traffico di rete. I file pcap verranno automaticamente processati e trasformati in JSON.
@@ -75,7 +75,9 @@ Lo script `entrypoint.sh` è il cuore del pipeline, gestendo l'acquisizione dei 
 
 L'interfaccia di rete dell'host su cui eseguire lo sniffing può essere configurate nel file `entrypoint.sh`:
 
-- **`INTERFACE`**: Interfaccia di rete da cui acquisire il traffico. (Default compatibile con il container: `eth0`)
+- **`INTERFACE`**: Interfaccia di rete da cui acquisire il traffico. (Default: `eth0`)
+
+Viene automaticamente cercata e configurata dal container in fase di avvio
 
 Le seguenti variabili possono essere configurate nel file `compose.yml`:
 
