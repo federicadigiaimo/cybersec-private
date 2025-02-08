@@ -7,9 +7,7 @@ Questo progetto automatizza il processo di acquisizione dei pacchetti di rete tr
 
 ## Authors
 <img src="https://github.com/federicadigiaimo.png" width="50" height="50"> [Federica Di Giaimo](https://github.com/federicadigiaimo)
-
 <img src="https://github.com/fillol.png" width="50" height="50"> [Filippo Lucchesi](https://github.com/fillol) 
-
 <img src="https://github.com/Mariman1234.png" width="50" height="50"> [Mariano Mancini](https://github.com/Mariman1234) 
 
 ## Struttura del progetto
