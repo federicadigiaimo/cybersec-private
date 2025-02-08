@@ -75,7 +75,9 @@ Lo script `entrypoint.sh` è il cuore del pipeline, gestendo l'acquisizione dei 
 
 L'interfaccia di rete dell'host su cui eseguire lo sniffing può essere configurate nel file `entrypoint.sh`:
 
-- **`INTERFACE`**: Interfaccia di rete da cui acquisire il traffico. (Default compatibile con il container: `eth0`)
+- **`INTERFACE`**: Interfaccia di rete da cui acquisire il traffico. (Default: `eth0`)
+
+Viene automaticamente cercata e configurata dal container in fase di avvio
 
 Le seguenti variabili possono essere configurate nel file `compose.yml`:
 
