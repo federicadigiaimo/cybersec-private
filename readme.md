@@ -1,6 +1,14 @@
-# Wireshark to Chronicle Pipeline
+# Cybersecurity-projects-2024
+Projects of the Cybersecurity course 2024/25, University of Bologna
+
+# Project: Wireshark to Chronicle Pipeline
 
 Questo progetto automatizza il processo di acquisizione dei pacchetti di rete tramite Wireshark (`tshark`), la loro conversione in formato JSON, e l'ulteriore trasformazione in un formato compatibile con Chronicle per l'analisi dei dati. Utilizza Docker per creare un ambiente isolato e gestire tutte le operazioni in modo efficiente.
+
+## Authors
+[Federica Di Giaimo](https://github.com/federicadigiaimo)
+[Filippo Lucchesi](https://github.com/fillol)
+[Mariano Mancini](https://github.com/Mariman1234)
 
 ## Struttura del progetto
 
