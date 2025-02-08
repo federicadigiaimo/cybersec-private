@@ -1,0 +1,1 @@
+# Script di esempio per soluzioni alternative
