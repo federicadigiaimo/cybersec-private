@@ -77,6 +77,29 @@ if ls "$INPUT_DIR"/*.pcap "$MID_DIR"/*.json 2> /dev/null | grep -q .; then
     recover_pending_files
 fi
 
+# Loop until an active interface is found
+while true; do
+    # Iterate over network interfaces
+    for iface_path in /sys/class/net/*; do
+        iface=$(basename "$iface_path")
+
+        # Skip unwanted interfaces
+        case "$iface" in
+            lo|docker*|br-*|tun*|wg*) continue ;;
+        esac
+
+        # Check if 'operstate' is "up"
+        if [[ -f "$iface_path/operstate" && $(< "$iface_path/operstate") == "up" ]]; then
+            INTERFACE="$iface"
+            echo "Active network interface found: $INTERFACE"
+            break 2
+        fi
+    done
+
+    echo "No active interface found. Retrying in 5 seconds..."
+    sleep 5
+done
+
 # Handle error in case of premature tshark termination
 trap 'echo "Terminating tshark due to script exit"; kill $TSHARK_PID' EXIT
 
