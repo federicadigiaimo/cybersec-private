@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  wireshark2chronicle:
+    build: .
+    network_mode: "host"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./sniff:/app/input
+      - ./processed:/app/trash
+      - ./chronicle:/app/output
+    environment:
+      - ROTATE=-b filesize:1024
+      - LIMITS=-c 20000
