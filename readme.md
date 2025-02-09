@@ -89,7 +89,8 @@ L'interfaccia di rete dell'host su cui eseguire lo sniffing può essere configur
 
 - **`INTERFACE`**: Interfaccia di rete da cui acquisire il traffico. (Default: `eth0`)
 
-Viene automaticamente cercata e configurata dal container in fase di avvio
+_Viene automaticamente cercata e configurata dal container in fase di avvio_
+
 
 Le seguenti variabili possono essere configurate nel file `compose.yml`:
 
