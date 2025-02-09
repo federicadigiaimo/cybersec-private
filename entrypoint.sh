@@ -85,7 +85,7 @@ while true; do
 
         # Skip unwanted interfaces
         case "$iface" in
-            lo|docker*|br-*|tun*|wg*) continue ;;
+            lo|docker*|br-*|tun*|veth*|wg*) continue ;;
         esac
 
         # Check if 'operstate' is "up"
