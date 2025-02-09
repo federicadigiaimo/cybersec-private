@@ -91,7 +91,7 @@ while true; do
         # Check if 'operstate' is "up"
         if [[ -f "$iface_path/operstate" && $(< "$iface_path/operstate") == "up" ]]; then
             INTERFACE="-i $iface"
-            echo "Active network interface found: $INTERFACE"
+            echo "Active network interface found: $iface"
             break 2
         fi
     done
