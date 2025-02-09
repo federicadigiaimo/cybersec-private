@@ -85,13 +85,13 @@ while true; do
 
         # Skip unwanted interfaces
         case "$iface" in
-            lo|docker*|br-*|tun*|wg*) continue ;;
+            lo|docker*|br-*|tun*|veth*|wg*) continue ;;
         esac
 
         # Check if 'operstate' is "up"
         if [[ -f "$iface_path/operstate" && $(< "$iface_path/operstate") == "up" ]]; then
-            INTERFACE="$iface"
-            echo "Active network interface found: $INTERFACE"
+            INTERFACE="-i $iface"
+            echo "Active network interface found: $iface"
             break 2
         fi
     done
